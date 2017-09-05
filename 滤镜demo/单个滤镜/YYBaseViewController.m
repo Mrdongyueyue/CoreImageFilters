@@ -19,14 +19,14 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IU1"]];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    [self.view addSubview:imageView];
-    imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *top = [imageView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor];
-    NSLayoutConstraint *bottom = [imageView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor];
-    NSLayoutConstraint *leading = [imageView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor];
-    NSLayoutConstraint *trailing = [imageView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor];
+    _imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"IU1"]];
+    _imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [self.view addSubview:_imageView];
+    _imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSLayoutConstraint *top = [_imageView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor];
+    NSLayoutConstraint *bottom = [_imageView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor];
+    NSLayoutConstraint *leading = [_imageView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor];
+    NSLayoutConstraint *trailing = [_imageView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor];
     [NSLayoutConstraint activateConstraints:@[top, bottom, leading, trailing]];
     
     self.title = _filterName;

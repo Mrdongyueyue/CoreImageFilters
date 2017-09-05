@@ -24,7 +24,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     [self configFilterNames];
 }
 
@@ -48,7 +47,7 @@
         vc.filterName = _filterNames[indexPath.item];
         [self showViewController:vc sender:nil];
     } else {
-        IUViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"IUViewController"];
+        IUViewController *vc = [[UIStoryboard storyboardWithName:@"IUViewController" bundle:nil] instantiateInitialViewController];
         [self showViewController:vc sender:nil];
     }
     
