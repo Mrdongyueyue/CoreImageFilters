@@ -7,10 +7,14 @@
 //
 
 #import "CIColorMonochromeViewController.h"
-//#import <GPUImage.h>
+#import <GPUImage.h>
 #import <Masonry.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreVideo/CoreVideo.h>
+#import <TuSDKGeeV1/TuSDKGeeV1.h>
+#import "GPUImageBeautifyFilter.h"
+#import "FPImageFilter.h"
+#import "FPCameraView.h"
 
 @interface CIColorMonochromeViewController ()<AVCapturePhotoCaptureDelegate>
 
@@ -19,22 +23,13 @@
 @property (nonatomic, weak) UISlider *b_slider;
 @property (nonatomic, weak) UISlider *a_slider;
 
-//捕获设备，通常是前置摄像头，后置摄像头，麦克风（音频输入）
-@property (nonatomic, strong) AVCaptureDevice *device;
+@property (nonatomic, strong) FPCameraView *camerView;
 
-//AVCaptureDeviceInput 代表输入设备，他使用AVCaptureDevice 来初始化
-@property (nonatomic, strong) AVCaptureDeviceInput *input;
-
-//输出图片
-@property (nonatomic ,strong) AVCapturePhotoOutput *imageOutput;
-
-//session：由他把输入输出结合在一起，并开始启动捕获设备（摄像头）
-@property (nonatomic, strong) AVCaptureSession *session;
-
-//图像预览层，实时显示捕获的图像
-@property (nonatomic ,strong) AVCaptureVideoPreviewLayer *previewLayer;
+@property (nonatomic, strong) AVCapturePhoto *photo;
 
 @property (nonatomic, strong) UIImage *image;
+
+@property (nonatomic, strong) TuSDKCPPhotoEditMultipleComponent *photoEditMultipleComponent;
 
 @end
 
@@ -46,6 +41,8 @@
     [self setupAV];
     [self setupSlider];
     
+//    [self setupTuSDK];
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
     button.frame = CGRectMake(180, 600, 30, 30);
     [button addTarget:self action:@selector(photoBtnDidClick) forControlEvents:UIControlEventTouchUpInside];
@@ -54,101 +51,25 @@
 }
 
 - (void)setupAV {
-    //    AVCaptureDevicePositionBack  后置摄像头
-    //    AVCaptureDevicePositionFront 前置摄像头
-    self.device = [self cameraWithPosition:AVCaptureDevicePositionFront];
-    self.input = [[AVCaptureDeviceInput alloc] initWithDevice:self.device error:nil];
-    
-    self.imageOutput = [[AVCapturePhotoOutput alloc] init];
-    
-    self.session = [[AVCaptureSession alloc] init];
-    //     拿到的图像的大小可以自行设定
-    //    AVCaptureSessionPreset320x240
-    //    AVCaptureSessionPreset352x288
-    //    AVCaptureSessionPreset640x480
-    //    AVCaptureSessionPreset960x540
-    //    AVCaptureSessionPreset1280x720
-    //    AVCaptureSessionPreset1920x1080
-    //    AVCaptureSessionPreset3840x2160
-    self.session.sessionPreset = AVCaptureSessionPreset640x480;
-    //输入输出设备结合
-    if ([self.session canAddInput:self.input]) {
-        [self.session addInput:self.input];
-    }
-    if ([self.session canAddOutput:self.imageOutput]) {
-        [self.session addOutput:self.imageOutput];
-    }
-    //预览层的生成
-    self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
-    self.previewLayer.frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height - 64);
-    self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    [self.view.layer addSublayer:self.previewLayer];
-    //设备取景开始
-    [self.session startRunning];
-    if ([_device lockForConfiguration:nil]) {
-        //自动闪光灯，
-        if ([_imageOutput.supportedFlashModes containsObject:@(AVCaptureFlashModeAuto)]) {
-            [AVCapturePhotoSettings photoSettings].flashMode = AVCaptureFlashModeAuto;
-            
-        }
-        //自动白平衡,但是好像一直都进不去
-        if ([_device isWhiteBalanceModeSupported:AVCaptureWhiteBalanceModeAutoWhiteBalance]) {
-            [_device setWhiteBalanceMode:AVCaptureWhiteBalanceModeAutoWhiteBalance];
-        }
-        [_device unlockForConfiguration];
-    }
+    _camerView = [[FPCameraView alloc] init];
+    [self.view addSubview:_camerView];
+    [_camerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
     
 }
 
-- (AVCaptureDevice *)cameraWithPosition:(AVCaptureDevicePosition)position{
-    AVCaptureDeviceDiscoverySession *devices = [AVCaptureDeviceDiscoverySession discoverySessionWithDeviceTypes:@[AVCaptureDeviceTypeBuiltInWideAngleCamera] mediaType:AVMediaTypeVideo position:position];
-    for ( AVCaptureDevice *device in devices.devices ) {
-        if ( device.position == position ){
-            return device;
-        }
-    }
-    return nil;
-}
 
-//MARK:-- AVCapturePhotoCaptureDelegate ~~~~
-- (void)captureOutput:(AVCapturePhotoOutput *)output didFinishProcessingPhoto:(AVCapturePhoto *)photo error:(NSError *)error {
-    NSData *data = [photo fileDataRepresentation];
-    self.image = [UIImage imageWithData:data];
-    self.imageView.image = self.image;//[UIImage imageWithData:data];
-    [self.session stopRunning];
-    self.previewLayer.hidden = YES;
-    UIImageWriteToSavedPhotosAlbum(self.image, nil, nil, NULL);
-}
-
-- (void)captureOutput:(AVCapturePhotoOutput *)output didFinishProcessingLivePhotoToMovieFileAtURL:(NSURL *)outputFileURL duration:(CMTime)duration photoDisplayTime:(CMTime)photoDisplayTime resolvedSettings:(AVCaptureResolvedPhotoSettings *)resolvedSettings error:(NSError *)error {
-    
-}
-
-- (void)photoBtnDidClick
-{
-    AVCapturePhotoSettings *setting = [[AVCapturePhotoSettings alloc] init];
-    
-//    NSDictionary *format = @{ (__bridge id)kCVPixelBufferPixelFormatTypeKey:setting.availablePreviewPhotoPixelFormatTypes.firstObject,
-//                              (__bridge id)kCVPixelBufferWidthKey :@(160),
-//                              (__bridge id)kCVPixelBufferHeightKey :@(160)
-//                              };
-//    setting.previewPhotoFormat = format;
-    [self.imageOutput capturePhotoWithSettings:setting delegate:self];
-    
-//    AVCaptureConnection *conntion = [self.imageOutput connectionWithMediaType:AVMediaTypeVideo];
-//    if (!conntion) {
-//        NSLog(@"拍照失败!");
-//        return;
-//    }
-//    [self.imageOutput captureStillImageAsynchronouslyFromConnection:conntion completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
-//        if (imageDataSampleBuffer == nil) {
-//            return ;
-//        }
-//        NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageDataSampleBuffer];
-//        [UIImage imageWithData:imageData];
-//        [self.session stopRunning];
-//
-//    }];
+- (void)photoBtnDidClick {
+    __weak typeof(self)wself = self;
+    [_camerView takePhotoComplete:^(AVCapturePhoto *photo, NSError *error) {
+        __strong typeof(wself)self = wself;
+        self.photo = photo;
+        UIImage *image = [[photo fileDataRepresentation] orientationImage];
+        self.image = image;
+        self.imageView.image = image;
+        [self beautifyFilter];
+    }];
 }
 
 - (void)setupSlider {
@@ -177,42 +98,13 @@
 }
 
 - (void)filter {
-    CIImage *inputImage = [CIImage imageWithCGImage:self.image.CGImage];
-    CIColor *color = [CIColor colorWithRed:_r_slider.value green:_g_slider.value blue:_b_slider.value alpha:_a_slider.value];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        //先打印NSLog(@"%@",[CIFilter filterNamesInCategory:kCICategoryDistortionEffect]);进去找到需要设置的属性(查询效果分类中都有什么效果)  可以设置什么效果
-        //然后通过[CIFilter filterWithName:@""];找到属性   具体效果的属性
-        //然后通过KVC的方式设置属性
-        NSLog(@"%@",[CIFilter filterNamesInCategory:kCICategoryDistortionEffect]);
-        /*
-         1.查询 效果分类中 包含什么效果：filterNamesInCategory:
-         2.查询 使用的效果中 可以设置什么属性（KVC） attributes
-         
-         使用步骤
-         1.需要添加滤镜的源图
-         2.初始化一个滤镜 设置滤镜（根据查询到的属性来设置）
-         3.把滤镜 输出的图像 和滤镜  合并 CIContext -> 得到一个合成之后的图像
-         4.展示
-         */
-        CIFilter *filter = [CIFilter filterWithName:@"CIColorMonochrome"];
-        NSLog(@"%@",filter.attributes);
-        //这个属性是必须赋值的，假如你处理的是图片的话
-        [filter setValue:inputImage forKey:kCIInputImageKey];
-        
-        [filter setValue:color forKey:kCIInputColorKey];
-        //CIContext
-        CIContext *context = [CIContext contextWithOptions:nil];
-        
-        CIImage *outPutImage = filter.outputImage;
-        
-        CGImageRef image = [context createCGImage:outPutImage fromRect:outPutImage.extent];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.imageView.image = [UIImage imageWithCGImage:image];
-            CGImageRelease(image);
-        });
-    });
-
+    [FPImageFilter colorMonochromeFilter:self.image color:[UIColor colorWithRed:_r_slider.value green:_g_slider.value blue:_b_slider.value alpha:_a_slider.value] complete:^(UIImage *image, NSError *error) {
+        self.imageView.image = image;
+        [self beautifyFilter];
+    }];
+//    [FPImageFilter autoFilter:self.photo complete:^(UIImage * _Nullable image, NSError * _Nullable error) {
+//        self.imageView.image = image;
+//    }];
 }
 
 - (UISlider *)makeSlider {
@@ -228,5 +120,56 @@
     [self filter];
 }
 
+- (void)beautifyFilter {
+    
+    [FPImageFilter beautyFilter:self.imageView.image complete:^(UIImage * _Nullable image, NSError * _Nullable error) {
+        self.imageView.image = image;
+    }];
+}
+
+- (void)setupTuSDK {
+    _photoEditMultipleComponent =
+    [TuSDKGeeV1 photoEditMultipleWithController:self
+                                  callbackBlock:^(TuSDKResult *result, NSError *error, UIViewController *controller)
+     {
+         // 获取图片失败
+         if (error) {
+             lsqLError(@"editMultiple error: %@", error.userInfo);
+             return;
+         }
+         [result logInfo];
+         
+         //
+         // 可在此添加自定义方法，在编辑完成时进行页面跳转操，例如 ：
+         // [controller presentViewController:[[UIViewController alloc] init] animated:YES completion:nil];
+         
+         // 图片处理结果 TuSDKResult *result 具有三种属性，分别是 ：
+         // result.image 是 UIImage 类型
+         // result.imagePath 是 NSString 类型
+         // result.imageAsset 是 TuSDKTSAssetInterface 类型
+         
+         // 下面以 result.image 举例如何将图片编辑结果持有并进行其他操作
+         // 可在此添加自定义方法，将 result 结果传出，例如 ：  [self openEditorWithImage:result.image];
+         // 并在外部使用方法接收 result 结果，例如 ： -(void)openEditorWithImage:(UIImage *)image;
+         // 用户也可以在 result 结果的外部接受的方法中实现页面的跳转操作，用户可根据自身需求使用。
+         
+         // 用户在获取到 result.image 结果并跳转到其他页面进行操作的时候可能会出现无法持有对象的情况
+         // 此时用户可以将 result.image 对象转换成 NSData 类型的对象，然后再进行操作，例如 ：
+         // NSData *imageData = UIImageJPEGRepresentation(result.image, 1.0);
+         // ViewController *viewController = [[ViewController alloc]init];
+         // [self.controller pushViewController:viewController animated:YES];
+         // viewController.currentImage = [UIImage imageWithData:imageData];
+         
+         // 获取 result 对象的不同属性，需要对 option 选项中的保存到相册和保存到临时文件相关项进行设置。
+         //
+         
+     }];
+    
+    [_photoEditMultipleComponent.options.editMultipleOptions disableModule:lsqTuSDKCPEditActionCuter];
+    
+    [_photoEditMultipleComponent.options.editMultipleOptions disableModule:lsqTuSDKCPEditActionFilter];
+    
+    [_photoEditMultipleComponent.options.editMultipleOptions disableModule:lsqTuSDKCPEditActionSkin];
+}
 
 @end

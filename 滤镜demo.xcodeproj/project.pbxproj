@@ -20,6 +20,9 @@
 		3C7EF65C1F5E69DC00B369F0 /* CIColorMonochromeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF65B1F5E69DC00B369F0 /* CIColorMonochromeViewController.m */; };
 		3C7EF66D1F5E8DB900B369F0 /* IUViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7EF66C1F5E8DB900B369F0 /* IUViewController.storyboard */; };
 		3C7EF66F1F5E8E8700B369F0 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7EF66E1F5E8E8700B369F0 /* ViewController.storyboard */; };
+		3C7EF6721F5E96E500B369F0 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF6711F5E96E500B369F0 /* GPUImageBeautifyFilter.m */; };
+		3C7EF6781F5EAB1000B369F0 /* FPCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF6771F5EAB1000B369F0 /* FPCameraView.m */; };
+		3C7EF67B1F5EB58800B369F0 /* FPImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF67A1F5EB58800B369F0 /* FPImageFilter.m */; };
 		8F7F38E627A163E90051C468 /* libPods-滤镜demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF130310B5F3051E4718C18 /* libPods-滤镜demo.a */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +71,12 @@
 		3C7EF65B1F5E69DC00B369F0 /* CIColorMonochromeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIColorMonochromeViewController.m; sourceTree = "<group>"; };
 		3C7EF66C1F5E8DB900B369F0 /* IUViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IUViewController.storyboard; sourceTree = "<group>"; };
 		3C7EF66E1F5E8E8700B369F0 /* ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewController.storyboard; sourceTree = "<group>"; };
+		3C7EF6701F5E96E500B369F0 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
+		3C7EF6711F5E96E500B369F0 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
+		3C7EF6761F5EAB1000B369F0 /* FPCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPCameraView.h; sourceTree = "<group>"; };
+		3C7EF6771F5EAB1000B369F0 /* FPCameraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPCameraView.m; sourceTree = "<group>"; };
+		3C7EF6791F5EB58800B369F0 /* FPImageFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPImageFilter.h; sourceTree = "<group>"; };
+		3C7EF67A1F5EB58800B369F0 /* FPImageFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPImageFilter.m; sourceTree = "<group>"; };
 		E45F7D5D775B8C34B91EE287 /* Pods-滤镜demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-滤镜demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-滤镜demo/Pods-滤镜demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +175,12 @@
 				3C7EF6581F5E68D100B369F0 /* YYBaseViewController.m */,
 				3C7EF65A1F5E69DC00B369F0 /* CIColorMonochromeViewController.h */,
 				3C7EF65B1F5E69DC00B369F0 /* CIColorMonochromeViewController.m */,
+				3C7EF6701F5E96E500B369F0 /* GPUImageBeautifyFilter.h */,
+				3C7EF6711F5E96E500B369F0 /* GPUImageBeautifyFilter.m */,
+				3C7EF6761F5EAB1000B369F0 /* FPCameraView.h */,
+				3C7EF6771F5EAB1000B369F0 /* FPCameraView.m */,
+				3C7EF6791F5EB58800B369F0 /* FPImageFilter.h */,
+				3C7EF67A1F5EB58800B369F0 /* FPImageFilter.m */,
 			);
 			path = "单个滤镜";
 			sourceTree = "<group>";
@@ -370,12 +385,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C7EF6231F5E4D1100B369F0 /* ViewController.m in Sources */,
+				3C7EF6721F5E96E500B369F0 /* GPUImageBeautifyFilter.m in Sources */,
 				3C7EF62E1F5E4D1100B369F0 /* main.m in Sources */,
 				3C7EF65C1F5E69DC00B369F0 /* CIColorMonochromeViewController.m in Sources */,
 				3C7EF6521F5E50F000B369F0 /* IUCollectionViewCell.m in Sources */,
 				3C7EF6551F5E53A100B369F0 /* IUViewController.m in Sources */,
 				3C7EF6201F5E4D1100B369F0 /* AppDelegate.m in Sources */,
+				3C7EF67B1F5EB58800B369F0 /* FPImageFilter.m in Sources */,
 				3C7EF6591F5E68D100B369F0 /* YYBaseViewController.m in Sources */,
+				3C7EF6781F5EAB1000B369F0 /* FPCameraView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import <Photos/Photos.h>
 
 @interface AppDelegate ()
 
@@ -23,6 +24,10 @@
     _window.rootViewController = navi;
     
     [_window makeKeyAndVisible];
+    
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+                 
+    }];
     return YES;
 }
 
