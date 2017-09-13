@@ -7,11 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreImage/CoreImage.h>
 
+#import "YYFilterAttributeModel.h"
 @interface YYBaseViewController : UIViewController
 
 @property (copy, nonatomic) NSString *filterName;
 
 @property (nonatomic, strong) UIImageView *imageView;
+
+@property (nonatomic, strong) NSArray<YYFilterAttributeModel *> *filterAttributeModels;
+
+
+/**
+ 用于重写
+ */
+- (void)refilter;
 
 @end

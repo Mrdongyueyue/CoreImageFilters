@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import <Photos/Photos.h>
+#import <TuSDK/TuSDK.h>
 
 @interface AppDelegate ()
 
@@ -28,6 +29,7 @@
     [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
                  
     }];
+    
     return YES;
 }
 

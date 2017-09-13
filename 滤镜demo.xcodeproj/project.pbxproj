@@ -7,6 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C1068A61F63F76E00F301AD /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068851F63F76D00F301AD /* Localizable.strings */; };
+		3C1068A71F63F76E00F301AD /* Bugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C1068871F63F76D00F301AD /* Bugly.framework */; };
+		3C1068A81F63F76E00F301AD /* homepage_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C10688A1F63F76D00F301AD /* homepage_bg@2x.png */; };
+		3C1068A91F63F76E00F301AD /* homepage_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C10688B1F63F76D00F301AD /* homepage_bg@3x.png */; };
+		3C1068AA1F63F76E00F301AD /* homepage_button_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C10688C1F63F76D00F301AD /* homepage_button_normal@2x.png */; };
+		3C1068AB1F63F76E00F301AD /* homepage_button_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C10688D1F63F76D00F301AD /* homepage_button_normal@3x.png */; };
+		3C1068AC1F63F76E00F301AD /* homepage_icon_beauty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C10688E1F63F76D00F301AD /* homepage_icon_beauty@2x.png */; };
+		3C1068AD1F63F76E00F301AD /* homepage_icon_beauty@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C10688F1F63F76D00F301AD /* homepage_icon_beauty@3x.png */; };
+		3C1068AE1F63F76E00F301AD /* homepage_icon_camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068901F63F76D00F301AD /* homepage_icon_camera@2x.png */; };
+		3C1068AF1F63F76E00F301AD /* homepage_icon_camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068911F63F76D00F301AD /* homepage_icon_camera@3x.png */; };
+		3C1068B01F63F76E00F301AD /* homepage_icon_next@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068921F63F76D00F301AD /* homepage_icon_next@2x.png */; };
+		3C1068B11F63F76E00F301AD /* homepage_icon_next@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068931F63F76D00F301AD /* homepage_icon_next@3x.png */; };
+		3C1068B21F63F76E00F301AD /* homepage_icon_tools@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068941F63F76D00F301AD /* homepage_icon_tools@2x.png */; };
+		3C1068B31F63F76E00F301AD /* homepage_icon_tools@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068951F63F76D00F301AD /* homepage_icon_tools@3x.png */; };
+		3C1068B51F63F76E00F301AD /* sample_gif_editor.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068971F63F76D00F301AD /* sample_gif_editor.gif */; };
+		3C1068B61F63F76E00F301AD /* sample_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068981F63F76D00F301AD /* sample_photo.jpg */; };
+		3C1068B71F63F76E00F301AD /* sample_watermark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068991F63F76D00F301AD /* sample_watermark.png */; };
+		3C1068B81F63F76E00F301AD /* TuSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C10689A1F63F76D00F301AD /* TuSDK.bundle */; };
+		3C1068B91F63F76E00F301AD /* FPCameraBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C10689F1F63F76E00F301AD /* FPCameraBase.m */; };
+		3C1068BA1F63F76E00F301AD /* GeeV2Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068A11F63F76E00F301AD /* GeeV2Sample.m */; };
+		3C1068BB1F63F76E00F301AD /* SampleBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068A31F63F76E00F301AD /* SampleBase.m */; };
+		3C1068BC1F63F76E00F301AD /* TuSDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068A51F63F76E00F301AD /* TuSDKViewController.m */; };
+		3C1068C91F63F7B300F301AD /* FPCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068BF1F63F7B300F301AD /* FPCameraView.m */; };
+		3C1068CA1F63F7B300F301AD /* FPImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068C11F63F7B300F301AD /* FPImageFilter.m */; };
+		3C1068CB1F63F7B300F301AD /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068C31F63F7B300F301AD /* GPUImageBeautifyFilter.m */; };
+		3C1068CC1F63F7B300F301AD /* YYFilterAttributeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068C51F63F7B300F301AD /* YYFilterAttributeModel.m */; };
+		3C1068CD1F63F7B300F301AD /* YYFilterAttributeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068C71F63F7B300F301AD /* YYFilterAttributeTableViewCell.m */; };
+		3C1068CE1F63F7B300F301AD /* YYFilterAttributeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068C81F63F7B300F301AD /* YYFilterAttributeTableViewCell.xib */; };
+		3C1068D11F63F7CE00F301AD /* CIAdditionCompositingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068D01F63F7CE00F301AD /* CIAdditionCompositingViewController.m */; };
+		3C1068DF1F6403F300F301AD /* CIAffineTileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068DE1F6403F300F301AD /* CIAffineTileViewController.m */; };
+		3C1068E21F6404AF00F301AD /* CIBarsSwipeTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068E11F6404AF00F301AD /* CIBarsSwipeTransitionViewController.m */; };
+		3C1068E41F64078A00F301AD /* ZXPUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068E31F64078A00F301AD /* ZXPUnicode.m */; };
+		3C47C2F81F67D37D000FFEB0 /* YYCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C47C2F71F67D37D000FFEB0 /* YYCameraView.m */; };
+		3C47C2FB1F67DDB7000FFEB0 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C47C2FA1F67DDB6000FFEB0 /* ViewController.storyboard */; };
+		3C6119891F66595E006338C6 /* CIBloomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6119881F66595E006338C6 /* CIBloomViewController.m */; };
 		3C7EF6201F5E4D1100B369F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF61F1F5E4D1100B369F0 /* AppDelegate.m */; };
 		3C7EF6231F5E4D1100B369F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF6221F5E4D1100B369F0 /* ViewController.m */; };
 		3C7EF6281F5E4D1100B369F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7EF6271F5E4D1100B369F0 /* Assets.xcassets */; };
@@ -18,12 +53,13 @@
 		3C7EF6551F5E53A100B369F0 /* IUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF6541F5E53A100B369F0 /* IUViewController.m */; };
 		3C7EF6591F5E68D100B369F0 /* YYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF6581F5E68D100B369F0 /* YYBaseViewController.m */; };
 		3C7EF65C1F5E69DC00B369F0 /* CIColorMonochromeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF65B1F5E69DC00B369F0 /* CIColorMonochromeViewController.m */; };
-		3C7EF66D1F5E8DB900B369F0 /* IUViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7EF66C1F5E8DB900B369F0 /* IUViewController.storyboard */; };
-		3C7EF66F1F5E8E8700B369F0 /* ViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C7EF66E1F5E8E8700B369F0 /* ViewController.storyboard */; };
-		3C7EF6721F5E96E500B369F0 /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF6711F5E96E500B369F0 /* GPUImageBeautifyFilter.m */; };
-		3C7EF6781F5EAB1000B369F0 /* FPCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF6771F5EAB1000B369F0 /* FPCameraView.m */; };
-		3C7EF67B1F5EB58800B369F0 /* FPImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF67A1F5EB58800B369F0 /* FPImageFilter.m */; };
-		8F7F38E627A163E90051C468 /* libPods-滤镜demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF130310B5F3051E4718C18 /* libPods-滤镜demo.a */; };
+		3C7F72421F5FCDDA00EA751F /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7F72411F5FCDDA00EA751F /* Photos.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		3C7F72441F5FCDF400EA751F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7F72431F5FCDF400EA751F /* Accelerate.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		3C7F72461F5FCFB500EA751F /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7F72451F5FCFB500EA751F /* libz.1.2.5.tbd */; };
+		3C7F72481F5FCFC000EA751F /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7F72471F5FCFC000EA751F /* libstdc++.tbd */; };
+		3C7F724A1F5FCFCB00EA751F /* libstdc++.6.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7F72491F5FCFCB00EA751F /* libstdc++.6.tbd */; };
+		3C7F724C1F5FCFD600EA751F /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C7F724B1F5FCFD500EA751F /* libstdc++.6.0.9.tbd */; };
+		8F7F38E627A163E90051C468 /* libPods-滤镜demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF130310B5F3051E4718C18 /* libPods-滤镜demo.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +82,58 @@
 /* Begin PBXFileReference section */
 		0AF130310B5F3051E4718C18 /* libPods-滤镜demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-滤镜demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BA52D21A9B7B0C12BA3E969 /* Pods-滤镜demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-滤镜demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-滤镜demo/Pods-滤镜demo.debug.xcconfig"; sourceTree = "<group>"; };
+		3C1068861F63F76D00F301AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3C1068871F63F76D00F301AD /* Bugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bugly.framework; sourceTree = "<group>"; };
+		3C1068881F63F76D00F301AD /* En */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = En; path = En.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3C10688A1F63F76D00F301AD /* homepage_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_bg@2x.png"; sourceTree = "<group>"; };
+		3C10688B1F63F76D00F301AD /* homepage_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_bg@3x.png"; sourceTree = "<group>"; };
+		3C10688C1F63F76D00F301AD /* homepage_button_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_button_normal@2x.png"; sourceTree = "<group>"; };
+		3C10688D1F63F76D00F301AD /* homepage_button_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_button_normal@3x.png"; sourceTree = "<group>"; };
+		3C10688E1F63F76D00F301AD /* homepage_icon_beauty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_icon_beauty@2x.png"; sourceTree = "<group>"; };
+		3C10688F1F63F76D00F301AD /* homepage_icon_beauty@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_icon_beauty@3x.png"; sourceTree = "<group>"; };
+		3C1068901F63F76D00F301AD /* homepage_icon_camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_icon_camera@2x.png"; sourceTree = "<group>"; };
+		3C1068911F63F76D00F301AD /* homepage_icon_camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_icon_camera@3x.png"; sourceTree = "<group>"; };
+		3C1068921F63F76D00F301AD /* homepage_icon_next@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_icon_next@2x.png"; sourceTree = "<group>"; };
+		3C1068931F63F76D00F301AD /* homepage_icon_next@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_icon_next@3x.png"; sourceTree = "<group>"; };
+		3C1068941F63F76D00F301AD /* homepage_icon_tools@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_icon_tools@2x.png"; sourceTree = "<group>"; };
+		3C1068951F63F76D00F301AD /* homepage_icon_tools@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homepage_icon_tools@3x.png"; sourceTree = "<group>"; };
+		3C1068971F63F76D00F301AD /* sample_gif_editor.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample_gif_editor.gif; sourceTree = "<group>"; };
+		3C1068981F63F76D00F301AD /* sample_photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sample_photo.jpg; sourceTree = "<group>"; };
+		3C1068991F63F76D00F301AD /* sample_watermark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample_watermark.png; sourceTree = "<group>"; };
+		3C10689A1F63F76D00F301AD /* TuSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TuSDK.bundle; sourceTree = "<group>"; };
+		3C10689B1F63F76E00F301AD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3C10689C1F63F76E00F301AD /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		3C10689E1F63F76E00F301AD /* FPCameraBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCameraBase.h; sourceTree = "<group>"; };
+		3C10689F1F63F76E00F301AD /* FPCameraBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCameraBase.m; sourceTree = "<group>"; };
+		3C1068A01F63F76E00F301AD /* GeeV2Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeeV2Sample.h; sourceTree = "<group>"; };
+		3C1068A11F63F76E00F301AD /* GeeV2Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeeV2Sample.m; sourceTree = "<group>"; };
+		3C1068A21F63F76E00F301AD /* SampleBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleBase.h; sourceTree = "<group>"; };
+		3C1068A31F63F76E00F301AD /* SampleBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleBase.m; sourceTree = "<group>"; };
+		3C1068A41F63F76E00F301AD /* TuSDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuSDKViewController.h; sourceTree = "<group>"; };
+		3C1068A51F63F76E00F301AD /* TuSDKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuSDKViewController.m; sourceTree = "<group>"; };
+		3C1068BE1F63F7B300F301AD /* FPCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCameraView.h; sourceTree = "<group>"; };
+		3C1068BF1F63F7B300F301AD /* FPCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCameraView.m; sourceTree = "<group>"; };
+		3C1068C01F63F7B300F301AD /* FPImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPImageFilter.h; sourceTree = "<group>"; };
+		3C1068C11F63F7B300F301AD /* FPImageFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPImageFilter.m; sourceTree = "<group>"; };
+		3C1068C21F63F7B300F301AD /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
+		3C1068C31F63F7B300F301AD /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
+		3C1068C41F63F7B300F301AD /* YYFilterAttributeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFilterAttributeModel.h; sourceTree = "<group>"; };
+		3C1068C51F63F7B300F301AD /* YYFilterAttributeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFilterAttributeModel.m; sourceTree = "<group>"; };
+		3C1068C61F63F7B300F301AD /* YYFilterAttributeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFilterAttributeTableViewCell.h; sourceTree = "<group>"; };
+		3C1068C71F63F7B300F301AD /* YYFilterAttributeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFilterAttributeTableViewCell.m; sourceTree = "<group>"; };
+		3C1068C81F63F7B300F301AD /* YYFilterAttributeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYFilterAttributeTableViewCell.xib; sourceTree = "<group>"; };
+		3C1068CF1F63F7CE00F301AD /* CIAdditionCompositingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIAdditionCompositingViewController.h; sourceTree = "<group>"; };
+		3C1068D01F63F7CE00F301AD /* CIAdditionCompositingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIAdditionCompositingViewController.m; sourceTree = "<group>"; };
+		3C1068DD1F6403F300F301AD /* CIAffineTileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIAffineTileViewController.h; sourceTree = "<group>"; };
+		3C1068DE1F6403F300F301AD /* CIAffineTileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIAffineTileViewController.m; sourceTree = "<group>"; };
+		3C1068E01F6404AF00F301AD /* CIBarsSwipeTransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIBarsSwipeTransitionViewController.h; sourceTree = "<group>"; };
+		3C1068E11F6404AF00F301AD /* CIBarsSwipeTransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIBarsSwipeTransitionViewController.m; sourceTree = "<group>"; };
+		3C1068E31F64078A00F301AD /* ZXPUnicode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXPUnicode.m; sourceTree = "<group>"; };
+		3C47C2F61F67D37D000FFEB0 /* YYCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCameraView.h; sourceTree = "<group>"; };
+		3C47C2F71F67D37D000FFEB0 /* YYCameraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYCameraView.m; sourceTree = "<group>"; };
+		3C47C2FA1F67DDB6000FFEB0 /* ViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ViewController.storyboard; sourceTree = "<group>"; };
+		3C6119871F66595E006338C6 /* CIBloomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIBloomViewController.h; sourceTree = "<group>"; };
+		3C6119881F66595E006338C6 /* CIBloomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIBloomViewController.m; sourceTree = "<group>"; };
 		3C7EF61B1F5E4D1100B369F0 /* 滤镜demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "滤镜demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7EF61E1F5E4D1100B369F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C7EF61F1F5E4D1100B369F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -69,14 +157,12 @@
 		3C7EF6581F5E68D100B369F0 /* YYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YYBaseViewController.m; sourceTree = "<group>"; };
 		3C7EF65A1F5E69DC00B369F0 /* CIColorMonochromeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIColorMonochromeViewController.h; sourceTree = "<group>"; };
 		3C7EF65B1F5E69DC00B369F0 /* CIColorMonochromeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIColorMonochromeViewController.m; sourceTree = "<group>"; };
-		3C7EF66C1F5E8DB900B369F0 /* IUViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IUViewController.storyboard; sourceTree = "<group>"; };
-		3C7EF66E1F5E8E8700B369F0 /* ViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewController.storyboard; sourceTree = "<group>"; };
-		3C7EF6701F5E96E500B369F0 /* GPUImageBeautifyFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageBeautifyFilter.h; sourceTree = "<group>"; };
-		3C7EF6711F5E96E500B369F0 /* GPUImageBeautifyFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageBeautifyFilter.m; sourceTree = "<group>"; };
-		3C7EF6761F5EAB1000B369F0 /* FPCameraView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPCameraView.h; sourceTree = "<group>"; };
-		3C7EF6771F5EAB1000B369F0 /* FPCameraView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPCameraView.m; sourceTree = "<group>"; };
-		3C7EF6791F5EB58800B369F0 /* FPImageFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPImageFilter.h; sourceTree = "<group>"; };
-		3C7EF67A1F5EB58800B369F0 /* FPImageFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPImageFilter.m; sourceTree = "<group>"; };
+		3C7F72411F5FCDDA00EA751F /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		3C7F72431F5FCDF400EA751F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		3C7F72451F5FCFB500EA751F /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
+		3C7F72471F5FCFC000EA751F /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		3C7F72491F5FCFCB00EA751F /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
+		3C7F724B1F5FCFD500EA751F /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		E45F7D5D775B8C34B91EE287 /* Pods-滤镜demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-滤镜demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-滤镜demo/Pods-滤镜demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +171,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7F724C1F5FCFD600EA751F /* libstdc++.6.0.9.tbd in Frameworks */,
+				3C7F724A1F5FCFCB00EA751F /* libstdc++.6.tbd in Frameworks */,
+				3C7F72481F5FCFC000EA751F /* libstdc++.tbd in Frameworks */,
+				3C7F72461F5FCFB500EA751F /* libz.1.2.5.tbd in Frameworks */,
+				3C7F72441F5FCDF400EA751F /* Accelerate.framework in Frameworks */,
+				3C7F72421F5FCDDA00EA751F /* Photos.framework in Frameworks */,
+				3C1068A71F63F76E00F301AD /* Bugly.framework in Frameworks */,
 				8F7F38E627A163E90051C468 /* libPods-滤镜demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +199,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C1068841F63F76D00F301AD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3C1068851F63F76D00F301AD /* Localizable.strings */,
+				3C1068871F63F76D00F301AD /* Bugly.framework */,
+				3C1068891F63F76D00F301AD /* Images */,
+				3C1068971F63F76D00F301AD /* sample_gif_editor.gif */,
+				3C1068981F63F76D00F301AD /* sample_photo.jpg */,
+				3C1068991F63F76D00F301AD /* sample_watermark.png */,
+				3C10689A1F63F76D00F301AD /* TuSDK.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3C1068891F63F76D00F301AD /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3C10688A1F63F76D00F301AD /* homepage_bg@2x.png */,
+				3C10688B1F63F76D00F301AD /* homepage_bg@3x.png */,
+				3C10688C1F63F76D00F301AD /* homepage_button_normal@2x.png */,
+				3C10688D1F63F76D00F301AD /* homepage_button_normal@3x.png */,
+				3C10688E1F63F76D00F301AD /* homepage_icon_beauty@2x.png */,
+				3C10688F1F63F76D00F301AD /* homepage_icon_beauty@3x.png */,
+				3C1068901F63F76D00F301AD /* homepage_icon_camera@2x.png */,
+				3C1068911F63F76D00F301AD /* homepage_icon_camera@3x.png */,
+				3C1068921F63F76D00F301AD /* homepage_icon_next@2x.png */,
+				3C1068931F63F76D00F301AD /* homepage_icon_next@3x.png */,
+				3C1068941F63F76D00F301AD /* homepage_icon_tools@2x.png */,
+				3C1068951F63F76D00F301AD /* homepage_icon_tools@3x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3C10689D1F63F76E00F301AD /* TuSDK */ = {
+			isa = PBXGroup;
+			children = (
+				3C10689E1F63F76E00F301AD /* FPCameraBase.h */,
+				3C10689F1F63F76E00F301AD /* FPCameraBase.m */,
+				3C1068A01F63F76E00F301AD /* GeeV2Sample.h */,
+				3C1068A11F63F76E00F301AD /* GeeV2Sample.m */,
+				3C1068A21F63F76E00F301AD /* SampleBase.h */,
+				3C1068A31F63F76E00F301AD /* SampleBase.m */,
+				3C1068A41F63F76E00F301AD /* TuSDKViewController.h */,
+				3C1068A51F63F76E00F301AD /* TuSDKViewController.m */,
+			);
+			path = TuSDK;
+			sourceTree = "<group>";
+		};
+		3C1068BD1F63F7B300F301AD /* view-model */ = {
+			isa = PBXGroup;
+			children = (
+				3C1068BE1F63F7B300F301AD /* FPCameraView.h */,
+				3C1068BF1F63F7B300F301AD /* FPCameraView.m */,
+				3C47C2F61F67D37D000FFEB0 /* YYCameraView.h */,
+				3C47C2F71F67D37D000FFEB0 /* YYCameraView.m */,
+				3C1068C01F63F7B300F301AD /* FPImageFilter.h */,
+				3C1068C11F63F7B300F301AD /* FPImageFilter.m */,
+				3C1068C21F63F7B300F301AD /* GPUImageBeautifyFilter.h */,
+				3C1068C31F63F7B300F301AD /* GPUImageBeautifyFilter.m */,
+				3C1068C41F63F7B300F301AD /* YYFilterAttributeModel.h */,
+				3C1068C51F63F7B300F301AD /* YYFilterAttributeModel.m */,
+				3C1068C61F63F7B300F301AD /* YYFilterAttributeTableViewCell.h */,
+				3C1068C71F63F7B300F301AD /* YYFilterAttributeTableViewCell.m */,
+				3C1068C81F63F7B300F301AD /* YYFilterAttributeTableViewCell.xib */,
+			);
+			path = "view-model";
+			sourceTree = "<group>";
+		};
 		3C7EF6121F5E4D1100B369F0 = {
 			isa = PBXGroup;
 			children = (
@@ -131,17 +292,19 @@
 		3C7EF61D1F5E4D1100B369F0 /* 滤镜demo */ = {
 			isa = PBXGroup;
 			children = (
+				3C1068E31F64078A00F301AD /* ZXPUnicode.m */,
+				3C1068841F63F76D00F301AD /* Resources */,
+				3C10689D1F63F76E00F301AD /* TuSDK */,
 				3C7EF6561F5E68BA00B369F0 /* 单个滤镜 */,
 				3C7EF61E1F5E4D1100B369F0 /* AppDelegate.h */,
 				3C7EF61F1F5E4D1100B369F0 /* AppDelegate.m */,
 				3C7EF6211F5E4D1100B369F0 /* ViewController.h */,
 				3C7EF6221F5E4D1100B369F0 /* ViewController.m */,
-				3C7EF66E1F5E8E8700B369F0 /* ViewController.storyboard */,
+				3C47C2FA1F67DDB6000FFEB0 /* ViewController.storyboard */,
 				3C7EF6501F5E50F000B369F0 /* IUCollectionViewCell.h */,
 				3C7EF6511F5E50F000B369F0 /* IUCollectionViewCell.m */,
 				3C7EF6531F5E53A100B369F0 /* IUViewController.h */,
 				3C7EF6541F5E53A100B369F0 /* IUViewController.m */,
-				3C7EF66C1F5E8DB900B369F0 /* IUViewController.storyboard */,
 				3C7EF6271F5E4D1100B369F0 /* Assets.xcassets */,
 				3C7EF6291F5E4D1100B369F0 /* LaunchScreen.storyboard */,
 				3C7EF62C1F5E4D1100B369F0 /* Info.plist */,
@@ -171,16 +334,19 @@
 		3C7EF6561F5E68BA00B369F0 /* 单个滤镜 */ = {
 			isa = PBXGroup;
 			children = (
+				3C1068BD1F63F7B300F301AD /* view-model */,
 				3C7EF6571F5E68D100B369F0 /* YYBaseViewController.h */,
 				3C7EF6581F5E68D100B369F0 /* YYBaseViewController.m */,
 				3C7EF65A1F5E69DC00B369F0 /* CIColorMonochromeViewController.h */,
 				3C7EF65B1F5E69DC00B369F0 /* CIColorMonochromeViewController.m */,
-				3C7EF6701F5E96E500B369F0 /* GPUImageBeautifyFilter.h */,
-				3C7EF6711F5E96E500B369F0 /* GPUImageBeautifyFilter.m */,
-				3C7EF6761F5EAB1000B369F0 /* FPCameraView.h */,
-				3C7EF6771F5EAB1000B369F0 /* FPCameraView.m */,
-				3C7EF6791F5EB58800B369F0 /* FPImageFilter.h */,
-				3C7EF67A1F5EB58800B369F0 /* FPImageFilter.m */,
+				3C1068CF1F63F7CE00F301AD /* CIAdditionCompositingViewController.h */,
+				3C1068D01F63F7CE00F301AD /* CIAdditionCompositingViewController.m */,
+				3C1068DD1F6403F300F301AD /* CIAffineTileViewController.h */,
+				3C1068DE1F6403F300F301AD /* CIAffineTileViewController.m */,
+				3C1068E01F6404AF00F301AD /* CIBarsSwipeTransitionViewController.h */,
+				3C1068E11F6404AF00F301AD /* CIBarsSwipeTransitionViewController.m */,
+				3C6119871F66595E006338C6 /* CIBloomViewController.h */,
+				3C6119881F66595E006338C6 /* CIBloomViewController.m */,
 			);
 			path = "单个滤镜";
 			sourceTree = "<group>";
@@ -188,6 +354,12 @@
 		6D2D289299521A8E0586CB6E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3C7F724B1F5FCFD500EA751F /* libstdc++.6.0.9.tbd */,
+				3C7F72491F5FCFCB00EA751F /* libstdc++.6.tbd */,
+				3C7F72471F5FCFC000EA751F /* libstdc++.tbd */,
+				3C7F72451F5FCFB500EA751F /* libz.1.2.5.tbd */,
+				3C7F72431F5FCDF400EA751F /* Accelerate.framework */,
+				3C7F72411F5FCDDA00EA751F /* Photos.framework */,
 				0AF130310B5F3051E4718C18 /* libPods-滤镜demo.a */,
 			);
 			name = Frameworks;
@@ -290,6 +462,9 @@
 			knownRegions = (
 				en,
 				Base,
+				En,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 3C7EF6121F5E4D1100B369F0;
 			productRefGroup = 3C7EF61C1F5E4D1100B369F0 /* Products */;
@@ -308,10 +483,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1068B21F63F76E00F301AD /* homepage_icon_tools@2x.png in Resources */,
+				3C1068AB1F63F76E00F301AD /* homepage_button_normal@3x.png in Resources */,
+				3C1068B31F63F76E00F301AD /* homepage_icon_tools@3x.png in Resources */,
 				3C7EF62B1F5E4D1100B369F0 /* LaunchScreen.storyboard in Resources */,
+				3C1068B01F63F76E00F301AD /* homepage_icon_next@2x.png in Resources */,
+				3C1068B11F63F76E00F301AD /* homepage_icon_next@3x.png in Resources */,
+				3C1068A81F63F76E00F301AD /* homepage_bg@2x.png in Resources */,
+				3C1068CE1F63F7B300F301AD /* YYFilterAttributeTableViewCell.xib in Resources */,
+				3C1068B61F63F76E00F301AD /* sample_photo.jpg in Resources */,
+				3C1068A61F63F76E00F301AD /* Localizable.strings in Resources */,
+				3C1068AD1F63F76E00F301AD /* homepage_icon_beauty@3x.png in Resources */,
+				3C1068B81F63F76E00F301AD /* TuSDK.bundle in Resources */,
+				3C1068AA1F63F76E00F301AD /* homepage_button_normal@2x.png in Resources */,
+				3C1068AC1F63F76E00F301AD /* homepage_icon_beauty@2x.png in Resources */,
 				3C7EF6281F5E4D1100B369F0 /* Assets.xcassets in Resources */,
-				3C7EF66D1F5E8DB900B369F0 /* IUViewController.storyboard in Resources */,
-				3C7EF66F1F5E8E8700B369F0 /* ViewController.storyboard in Resources */,
+				3C1068B71F63F76E00F301AD /* sample_watermark.png in Resources */,
+				3C1068A91F63F76E00F301AD /* homepage_bg@3x.png in Resources */,
+				3C1068AF1F63F76E00F301AD /* homepage_icon_camera@3x.png in Resources */,
+				3C1068B51F63F76E00F301AD /* sample_gif_editor.gif in Resources */,
+				3C1068AE1F63F76E00F301AD /* homepage_icon_camera@2x.png in Resources */,
+				3C47C2FB1F67DDB7000FFEB0 /* ViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,16 +576,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C1068BA1F63F76E00F301AD /* GeeV2Sample.m in Sources */,
 				3C7EF6231F5E4D1100B369F0 /* ViewController.m in Sources */,
-				3C7EF6721F5E96E500B369F0 /* GPUImageBeautifyFilter.m in Sources */,
+				3C1068CC1F63F7B300F301AD /* YYFilterAttributeModel.m in Sources */,
+				3C1068B91F63F76E00F301AD /* FPCameraBase.m in Sources */,
+				3C1068CD1F63F7B300F301AD /* YYFilterAttributeTableViewCell.m in Sources */,
+				3C1068CB1F63F7B300F301AD /* GPUImageBeautifyFilter.m in Sources */,
+				3C1068BB1F63F76E00F301AD /* SampleBase.m in Sources */,
+				3C1068D11F63F7CE00F301AD /* CIAdditionCompositingViewController.m in Sources */,
+				3C6119891F66595E006338C6 /* CIBloomViewController.m in Sources */,
+				3C1068E41F64078A00F301AD /* ZXPUnicode.m in Sources */,
 				3C7EF62E1F5E4D1100B369F0 /* main.m in Sources */,
+				3C47C2F81F67D37D000FFEB0 /* YYCameraView.m in Sources */,
+				3C1068CA1F63F7B300F301AD /* FPImageFilter.m in Sources */,
 				3C7EF65C1F5E69DC00B369F0 /* CIColorMonochromeViewController.m in Sources */,
 				3C7EF6521F5E50F000B369F0 /* IUCollectionViewCell.m in Sources */,
+				3C1068BC1F63F76E00F301AD /* TuSDKViewController.m in Sources */,
 				3C7EF6551F5E53A100B369F0 /* IUViewController.m in Sources */,
+				3C1068E21F6404AF00F301AD /* CIBarsSwipeTransitionViewController.m in Sources */,
 				3C7EF6201F5E4D1100B369F0 /* AppDelegate.m in Sources */,
-				3C7EF67B1F5EB58800B369F0 /* FPImageFilter.m in Sources */,
+				3C1068DF1F6403F300F301AD /* CIAffineTileViewController.m in Sources */,
 				3C7EF6591F5E68D100B369F0 /* YYBaseViewController.m in Sources */,
-				3C7EF6781F5EAB1000B369F0 /* FPCameraView.m in Sources */,
+				3C1068C91F63F7B300F301AD /* FPCameraView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +633,17 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		3C1068851F63F76D00F301AD /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C1068861F63F76D00F301AD /* Base */,
+				3C1068881F63F76D00F301AD /* En */,
+				3C10689B1F63F76E00F301AD /* zh-Hans */,
+				3C10689C1F63F76E00F301AD /* zh-Hant */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		3C7EF6291F5E4D1100B369F0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -549,10 +764,15 @@
 			baseConfigurationReference = 3BA52D21A9B7B0C12BA3E969 /* Pods-滤镜demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 22B4UKXY6S;
+				DEVELOPMENT_TEAM = G8855GBF39;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/滤镜demo/Resources",
+				);
 				INFOPLIST_FILE = "滤镜demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yue.--demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.filterDemo.yue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -563,10 +783,15 @@
 			baseConfigurationReference = E45F7D5D775B8C34B91EE287 /* Pods-滤镜demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 22B4UKXY6S;
+				DEVELOPMENT_TEAM = G8855GBF39;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/滤镜demo/Resources",
+				);
 				INFOPLIST_FILE = "滤镜demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yue.--demo";
+				PRODUCT_BUNDLE_IDENTIFIER = com.filterDemo.yue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

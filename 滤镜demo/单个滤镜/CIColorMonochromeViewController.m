@@ -37,17 +37,68 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSArray *array = @[//0.76 0.6
+                       @{
+                           @"name":@"color_r",
+                           @"max":@"1",
+                           @"min":@"0",
+                           @"v":@"1",
+                           },
+                       @{
+                           @"name":@"color_g",
+                           @"max":@"1",
+                           @"min":@"0",
+                           @"v":@"0.76",
+                           },
+                       @{
+                           @"name":@"color_b",
+                           @"max":@"1",
+                           @"min":@"0",
+                           @"v":@"0.6",
+                           },
+                       @{
+                           @"name":@"color_a",
+                           @"max":@"1",
+                           @"min":@"0",
+                           @"v":@"1",
+                           },
+                       ];
+    NSMutableArray *temp = [NSMutableArray array];
+    for (NSInteger i = 0; i < 4; i ++) {
+        YYFilterAttributeModel *model = [YYFilterAttributeModel new];
+        NSDictionary *dict = array[i];
+        model.attributeName = dict[@"name"];
+        model.maxValue = [dict[@"max"] floatValue];
+        model.minValue = [dict[@"min"] floatValue];
+        model.value = [dict[@"v"] floatValue];
+        [temp addObject:model];
+    }
     
-    [self setupAV];
-    [self setupSlider];
+    self.filterAttributeModels = temp;
+    self.image = self.imageView.image;
+    [self refilter];
+//    [self setupAV];
+//    [self setupSlider];
     
 //    [self setupTuSDK];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeContactAdd];
-    button.frame = CGRectMake(180, 600, 30, 30);
-    [button addTarget:self action:@selector(photoBtnDidClick) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
-    
+//    UIButton *takePhotoButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
+//    takePhotoButton.frame = CGRectMake(160, 600, 30, 30);
+//    [takePhotoButton addTarget:self action:@selector(photoBtnDidClick) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:takePhotoButton];
+//
+//    UIButton *flipButton = [UIButton buttonWithType:UIButtonTypeContactAdd];
+//    flipButton.frame = CGRectMake(280, 70, 30, 30);
+//    [flipButton addTarget:self action:@selector(flipBtnClick) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:flipButton];
+//
+//    UIButton *flashButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    flashButton.frame = CGRectMake(320, 70, 50, 30);
+//    flashButton.backgroundColor = [UIColor orangeColor];
+//    flashButton.titleLabel.textColor = [UIColor whiteColor];
+//    [flashButton addTarget:self action:@selector(flashBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:flashButton];
+//    [flashButton setTitle:@"auto" forState:UIControlStateNormal];
 }
 
 - (void)setupAV {
@@ -56,20 +107,47 @@
     [_camerView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.view);
     }];
-    
 }
 
 
 - (void)photoBtnDidClick {
     __weak typeof(self)wself = self;
-    [_camerView takePhotoComplete:^(AVCapturePhoto *photo, NSError *error) {
-        __strong typeof(wself)self = wself;
-        self.photo = photo;
-        UIImage *image = [[photo fileDataRepresentation] orientationImage];
-        self.image = image;
-        self.imageView.image = image;
-        [self beautifyFilter];
-    }];
+    if (@available(iOS 11.0, *)) {
+        [_camerView takePhotoComplete:^(AVCapturePhoto *photo, NSError *error) {
+            __strong typeof(wself)self = wself;
+            self.photo = photo;
+            UIImage *image = [[photo fileDataRepresentation] orientationImage];
+            self.image = image;
+            self.imageView.image = image;
+            [self beautifyFilter];
+        }];
+    } else {
+        
+    }
+}
+
+- (void)flipBtnClick {
+    [_camerView flipCamera];
+}
+
+- (void)flashBtnClick:(UIButton *)btn {
+    switch (_camerView.flashMode) {
+        case AVCaptureFlashModeOn:
+            _camerView.flashMode = AVCaptureFlashModeOff;
+            [btn setTitle:@"off" forState:UIControlStateNormal];
+            break;
+        case AVCaptureFlashModeOff:
+            _camerView.flashMode = AVCaptureFlashModeAuto;
+            [btn setTitle:@"auto" forState:UIControlStateNormal];
+            break;
+        case AVCaptureFlashModeAuto:
+            _camerView.flashMode = AVCaptureFlashModeOn;
+            [btn setTitle:@"on" forState:UIControlStateNormal];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)setupSlider {
@@ -97,14 +175,20 @@
     
 }
 
-- (void)filter {
-    [FPImageFilter colorMonochromeFilter:self.image color:[UIColor colorWithRed:_r_slider.value green:_g_slider.value blue:_b_slider.value alpha:_a_slider.value] complete:^(UIImage *image, NSError *error) {
+- (void)refilter {
+    [super refilter];
+    UIColor *color = [UIColor colorWithRed:self.filterAttributeModels[0].value
+                                     green:self.filterAttributeModels[1].value
+                                      blue:self.filterAttributeModels[2].value
+                                     alpha:self.filterAttributeModels[3].value];
+    
+    __weak typeof(self)wself = self;
+    [FPImageFilter colorMonochromeFilter:self.image color:color complete:^(UIImage *image, NSError *error) {
+        __strong typeof(wself)self = wself;
         self.imageView.image = image;
         [self beautifyFilter];
     }];
-//    [FPImageFilter autoFilter:self.photo complete:^(UIImage * _Nullable image, NSError * _Nullable error) {
-//        self.imageView.image = image;
-//    }];
+
 }
 
 - (UISlider *)makeSlider {
@@ -117,59 +201,15 @@
 }
 
 - (void)didSlider:(UISlider *)slider {
-    [self filter];
+//    [self filter];
 }
 
 - (void)beautifyFilter {
-    
+    __weak typeof(self)wself = self;
     [FPImageFilter beautyFilter:self.imageView.image complete:^(UIImage * _Nullable image, NSError * _Nullable error) {
+        __strong typeof(wself)self = wself;
         self.imageView.image = image;
     }];
-}
-
-- (void)setupTuSDK {
-    _photoEditMultipleComponent =
-    [TuSDKGeeV1 photoEditMultipleWithController:self
-                                  callbackBlock:^(TuSDKResult *result, NSError *error, UIViewController *controller)
-     {
-         // 获取图片失败
-         if (error) {
-             lsqLError(@"editMultiple error: %@", error.userInfo);
-             return;
-         }
-         [result logInfo];
-         
-         //
-         // 可在此添加自定义方法，在编辑完成时进行页面跳转操，例如 ：
-         // [controller presentViewController:[[UIViewController alloc] init] animated:YES completion:nil];
-         
-         // 图片处理结果 TuSDKResult *result 具有三种属性，分别是 ：
-         // result.image 是 UIImage 类型
-         // result.imagePath 是 NSString 类型
-         // result.imageAsset 是 TuSDKTSAssetInterface 类型
-         
-         // 下面以 result.image 举例如何将图片编辑结果持有并进行其他操作
-         // 可在此添加自定义方法，将 result 结果传出，例如 ：  [self openEditorWithImage:result.image];
-         // 并在外部使用方法接收 result 结果，例如 ： -(void)openEditorWithImage:(UIImage *)image;
-         // 用户也可以在 result 结果的外部接受的方法中实现页面的跳转操作，用户可根据自身需求使用。
-         
-         // 用户在获取到 result.image 结果并跳转到其他页面进行操作的时候可能会出现无法持有对象的情况
-         // 此时用户可以将 result.image 对象转换成 NSData 类型的对象，然后再进行操作，例如 ：
-         // NSData *imageData = UIImageJPEGRepresentation(result.image, 1.0);
-         // ViewController *viewController = [[ViewController alloc]init];
-         // [self.controller pushViewController:viewController animated:YES];
-         // viewController.currentImage = [UIImage imageWithData:imageData];
-         
-         // 获取 result 对象的不同属性，需要对 option 选项中的保存到相册和保存到临时文件相关项进行设置。
-         //
-         
-     }];
-    
-    [_photoEditMultipleComponent.options.editMultipleOptions disableModule:lsqTuSDKCPEditActionCuter];
-    
-    [_photoEditMultipleComponent.options.editMultipleOptions disableModule:lsqTuSDKCPEditActionFilter];
-    
-    [_photoEditMultipleComponent.options.editMultipleOptions disableModule:lsqTuSDKCPEditActionSkin];
 }
 
 @end
