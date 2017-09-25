@@ -7,105 +7,144 @@
 //
 
 #import "CIBarsSwipeTransitionViewController.h"
+@import GLKit;
 
-@interface CIBarsSwipeTransitionViewController ()
+@interface CIBarsSwipeTransitionViewController ()<GLKViewDelegate>
+
+@property (nonatomic, strong) GLKView *glkView;
+@property (nonatomic, strong) CIImage *image1;
+@property (nonatomic, strong) CIImage *image2;
+@property (nonatomic, strong) CIImage *maskImage;
+@property (nonatomic, strong) CIVector *extent;
+@property (nonatomic, strong) CIFilter *transition;
+@property (nonatomic, strong) CIContext *myContext;
+@property (nonatomic, assign) NSTimer *timer;
 
 @end
 
-@implementation CIBarsSwipeTransitionViewController
+@implementation CIBarsSwipeTransitionViewController {
+    NSTimeInterval  base;
+    CGRect destRect;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self refilter];
+    UIImage *uiImage1 = [UIImage imageNamed:@"IU1"];
+    UIImage *uiImage2 = [UIImage imageNamed:@"IU4-1"];
     
+    self.image1 = [CIImage imageWithCGImage:uiImage1.CGImage];
+    self.image2 = [CIImage imageWithCGImage:uiImage2.CGImage];
     
+    self.extent = [CIVector vectorWithX:0
+                                      Y:0
+                                      Z:uiImage1.size.width
+                                      W:uiImage2.size.height];
+    
+    base = [NSDate timeIntervalSinceReferenceDate];
+    
+    self.glkView = [[GLKView alloc] initWithFrame:self.view.bounds];
+    self.glkView.delegate = self;
+    self.glkView.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    [self.view addSubview:self.glkView];
+    
+    self.myContext = [CIContext contextWithEAGLContext:self.glkView.context];
+    CGFloat scale = [UIScreen mainScreen].scale;
+    CGFloat w = self.glkView.frame.size.width * scale;
+    CGFloat h = w * (uiImage1.size.height / uiImage1.size.width);
+    destRect = CGRectMake(0, 64, w, h);
+    
+    self.transition = [CIFilter filterWithName: self.filterName];
+    
+    CIImage *b_inputImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"IU1"].CGImage];
+    CIImage *t_inputImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"IU4-1"].CGImage];
+    
+    [self.transition setValue:t_inputImage forKey:kCIInputTargetImageKey];
+    [self.transition setValue:@(0.5) forKey:kCIInputTimeKey];
+    [self.transition setValue:b_inputImage forKey:kCIInputImageKey];
+    [self.transition setValue:@(M_PI_2) forKey:kCIInputAngleKey];
     
 }
 
-- (void)refilter {
-    CIImage *b_inputImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"IU1"].CGImage];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+- (void)viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 / 30.0
+                                                  target:self
+                                                selector:@selector(onTimer:)
+                                                userInfo:nil
+                                                 repeats:YES];
+    [self.timer fire];
+}
+
+- (void)viewWillLayoutSubviews {
+    
+    self.glkView.frame = self.view.bounds;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [super viewWillDisappear:animated];
+    
+    if ([self.timer isValid]) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+}
+
+#pragma mark - Private
+
+- (CIImage *)imageForTransitionAtTime:(float)time {
+    // toggle images
+    if (fmodf(time, 2.0) < 1.0f)
+    {
+        [self.transition setValue:self.image1 forKey:kCIInputImageKey];
+        [self.transition setValue:self.image2 forKey:kCIInputTargetImageKey];
+    }
+    else
+    {
+        [self.transition setValue:self.image2 forKey:kCIInputImageKey];
+        [self.transition setValue:self.image1 forKey:kCIInputTargetImageKey];
+    }
+    
+    CGFloat transitionTime = 0.5 * (1 - cos(fmodf(time, 1.0f) * M_PI));
+    [self.transition setValue:@(transitionTime) forKey:kCIInputTimeKey];
+    
+    return self.transition.outputImage;
+}
+
+
+
+
+// =============================================================================
+#pragma mark - GLKViewDelegate
+
+- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(queue, ^{
         
-        CIFilter *filter = [CIFilter filterWithName:self.filterName];
-        NSLog(@"%@",filter.attributes);
-//        [filter setValue:@(2.0) forKey:kCIInputAngleKey];
-        //CIAttributeClass = NSNumber;
-        //CIAttributeDefault = "3.141592653589793";
-        //CIAttributeDescription = "彩条的角度（以弧度为单位）。";
-        //CIAttributeDisplayName = "角度";
+        float t = 0.4 * ([NSDate timeIntervalSinceReferenceDate] - base);
         
-//        [filter setValue:@20 forKey:@"inputBarOffset"];
-//        inputBarOffset =     {
-//            CIAttributeClass = NSNumber;
-//            CIAttributeDefault = 10;
-//            CIAttributeDescription = "一个栏相对于另一个栏的偏移量";
-//            CIAttributeDisplayName = "彩条偏移";
-//            CIAttributeMin = 1;
-//            CIAttributeSliderMax = 100;
-//            CIAttributeSliderMin = 1;
-//            CIAttributeType = CIAttributeTypeScalar;
-//        };
-        CIImage *t_inputImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"IU3"].CGImage];
-        [filter setValue:t_inputImage forKey:kCIInputTargetImageKey];
-//        inputTargetImage =     {
-//            CIAttributeClass = CIImage;
-//            CIAttributeDescription = "过渡所使用的目标图像。";
-//            CIAttributeDisplayName = "目标图像";
-//            CIAttributeType = CIAttributeTypeImage;
-//        };
-        [filter setValue:@3 forKey:kCIInputTimeKey];
-//        inputTime =     {
-//            CIAttributeClass = NSNumber;
-//            CIAttributeDefault = 0;
-//            CIAttributeDescription = "过渡的参数时间。该值从头（在时间 0）到尾（在时间 1）驱动过渡。";
-//            CIAttributeDisplayName = "时间";
-//            CIAttributeIdentity = 0;
-//            CIAttributeMax = 1;
-//            CIAttributeMin = 0;
-//            CIAttributeSliderMax = 1;
-//            CIAttributeSliderMin = 0;
-//            CIAttributeType = CIAttributeTypeTime;
-//        };
-//        inputWidth =     {
-//            CIAttributeClass = NSNumber;
-//            CIAttributeDefault = 30;
-//            CIAttributeDescription = "每个条形图的宽度。";
-//            CIAttributeDisplayName = "宽度";
-//            CIAttributeMin = 2;
-//            CIAttributeSliderMax = 300;
-//            CIAttributeSliderMin = 2;
-//            CIAttributeType = CIAttributeTypeDistance;
-//        };
-        
-        [filter setValue:b_inputImage forKey:kCIInputImageKey];
-        CIContext *context = [CIContext contextWithOptions:nil];
-        
-        CIImage *outPutImage = filter.outputImage;
-        
-        CGImageRef image = [context createCGImage:outPutImage fromRect:outPutImage.extent];
+        CIImage *image = [self imageForTransitionAtTime:t];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
-            CABasicAnimation *anima = [CABasicAnimation animation];
-            anima.duration = 3;
-            anima.toValue = @[filter];
-            [self.imageView.layer addAnimation:anima forKey:@"filter"];
-//            UIImage *f_image = [UIImage imageWithCGImage:image];
-//            self.imageView.image = f_image;
-            CGImageRelease(image);
+            [self.myContext drawImage:image
+                               inRect:destRect
+                             fromRect:image.extent];
         });
     });
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// =============================================================================
+#pragma mark - Timer Handler
+
+- (void)onTimer:(NSTimer *)timer {
+    
+    [self.glkView setNeedsDisplay];
 }
-*/
 
 @end

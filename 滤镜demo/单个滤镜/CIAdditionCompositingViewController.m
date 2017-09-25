@@ -22,7 +22,7 @@
 
 - (void)refilter {
     CIImage *b_inputImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"IU1"].CGImage];
-    CIImage *a_inputImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"粉色购物车"].CGImage];
+    CIImage *a_inputImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"checkerBoard"].CGImage];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
@@ -35,7 +35,7 @@
 //        ;
         CIImage *outPutImage = filter.outputImage;
 
-        [context drawImage:a_inputImage inRect:(CGRect){{100, 100}, a_inputImage.extent.size } fromRect:a_inputImage.extent];
+//        [context drawImage:a_inputImage inRect:checkerBoard fromRect:a_inputImage.extent];
         CGImageRef image = [context createCGImage:outPutImage fromRect:(CGRect){{0, 0}, b_inputImage.extent.size } format:kCIFormatRGBA8 colorSpace:CGColorSpaceCreateDeviceRGB()];
         
         dispatch_async(dispatch_get_main_queue(), ^{
