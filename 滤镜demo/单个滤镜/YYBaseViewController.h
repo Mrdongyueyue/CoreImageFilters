@@ -28,4 +28,8 @@
  */
 - (void)refilter;
 
+- (void)transitionModels:(NSArray *)array;
+
+- (void)setOutputImage:(CGRect)extent;
+
 @end

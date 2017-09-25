@@ -32,18 +32,7 @@
                            @"v":@"20",
                            },
                        ];
-    NSMutableArray *temp = [NSMutableArray array];
-    for (NSInteger i = 0; i < array.count; i ++) {
-        YYFilterAttributeModel *model = [YYFilterAttributeModel new];
-        NSDictionary *dict = array[i];
-        model.attributeName = dict[@"name"];
-        model.maxValue = [dict[@"max"] floatValue];
-        model.minValue = [dict[@"min"] floatValue];
-        model.value = [dict[@"v"] floatValue];
-        [temp addObject:model];
-    }
-    
-    self.filterAttributeModels = temp;
+    [self transitionModels:array];
     
     [self refilter];
 }
@@ -52,17 +41,7 @@
     [self.filter setValue:@(self.filterAttributeModels[0].value) forKey:kCIInputRadiusKey];
     [self.filter setValue:_vector forKey:kCIInputCenterKey];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        CIImage *outPutImage = self.filter.outputImage;
-        CIContext *context = [CIContext contextWithOptions:nil];
-        CGImageRef cg_image = [context createCGImage:outPutImage fromRect:_ci_image.extent];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            self.imageView.image = [UIImage imageWithCGImage:cg_image];
-            CGImageRelease(cg_image);
-        });
-    });
+    [self setOutputImage:_ci_image.extent];
     
 }
 

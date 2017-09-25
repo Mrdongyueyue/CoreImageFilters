@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/ViewController.m"
-            timestampString = "528022591.79543"
+            timestampString = "528026381.344779"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/YYBaseViewController.m"
-            timestampString = "528022591.795745"
+            timestampString = "528026381.345054"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/CIBumpDistortionViewController.m"
-            timestampString = "528022591.796089"
+            timestampString = "528026381.345337"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "96"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/CIBarsSwipeTransitionViewController.m"
-            timestampString = "528022591.796317"
+            timestampString = "528026381.345526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "125"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/CIBarsSwipeTransitionViewController.m"
-            timestampString = "528022591.796531"
+            timestampString = "528026381.345717"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "132"
@@ -138,7 +138,7 @@
                   moduleName = "&#x6ee4;&#x955c;demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dongzhiyue/Desktop/demo/%E6%97%A5%E5%B8%B8%E7%BB%83%E4%B9%A0demo/demo5-0/%E6%BB%A4%E9%95%9Cdemo/%E6%BB%A4%E9%95%9Cdemo/%E5%8D%95%E4%B8%AA%E6%BB%A4%E9%95%9C/CIBarsSwipeTransitionViewController.m"
-                  timestampString = "528022592.05355"
+                  timestampString = "528026381.599873"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "132"
@@ -153,7 +153,7 @@
                   moduleName = "&#x6ee4;&#x955c;demo"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dongzhiyue/Desktop/demo/%E6%97%A5%E5%B8%B8%E7%BB%83%E4%B9%A0demo/demo5-0/%E6%BB%A4%E9%95%9Cdemo/%E6%BB%A4%E9%95%9Cdemo/%E5%8D%95%E4%B8%AA%E6%BB%A4%E9%95%9C/CIBarsSwipeTransitionViewController.m"
-                  timestampString = "528022592.054966"
+                  timestampString = "528026381.601489"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "134"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/CIBarsSwipeTransitionViewController.m"
-            timestampString = "528022591.796596"
+            timestampString = "528026381.345778"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "130"
@@ -186,7 +186,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/CIBarsSwipeTransitionViewController.m"
-            timestampString = "528022591.796655"
+            timestampString = "528026381.345833"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "62"
@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/CIBarsSwipeTransitionViewController.m"
-            timestampString = "528022591.796706"
+            timestampString = "528026381.345882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -214,33 +214,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/CIColorClampViewController.m"
-            timestampString = "528022591.796758"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
-            landmarkName = "-refilter"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/CITemperatureAndTintViewController.m"
-            timestampString = "528022591.796958"
+            timestampString = "528026381.346114"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "-refilter"
-            landmarkType = "7">
+            endingLineNumber = "63">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

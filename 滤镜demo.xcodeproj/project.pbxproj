@@ -52,6 +52,7 @@
 		3C5AA9181F78ECFB00B7B9C4 /* CITemperatureAndTintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AA9171F78ECFB00B7B9C4 /* CITemperatureAndTintViewController.m */; };
 		3C5AA91B1F78F1CF00B7B9C4 /* CIVibranceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AA91A1F78F1CF00B7B9C4 /* CIVibranceViewController.m */; };
 		3C5AA91E1F78FAFF00B7B9C4 /* CIColorPolynomialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AA91D1F78FAFF00B7B9C4 /* CIColorPolynomialViewController.m */; };
+		3C5AA9211F79091E00B7B9C4 /* CIColorControlsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AA9201F79091E00B7B9C4 /* CIColorControlsViewController.m */; };
 		3C6119891F66595E006338C6 /* CIBloomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6119881F66595E006338C6 /* CIBloomViewController.m */; };
 		3C646BC51F6905D000429B2F /* CIColorCubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C646BC41F6905D000429B2F /* CIColorCubeViewController.m */; };
 		3C7EF6201F5E4D1100B369F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF61F1F5E4D1100B369F0 /* AppDelegate.m */; };
@@ -166,6 +167,8 @@
 		3C5AA91A1F78F1CF00B7B9C4 /* CIVibranceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIVibranceViewController.m; sourceTree = "<group>"; };
 		3C5AA91C1F78FAFF00B7B9C4 /* CIColorPolynomialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIColorPolynomialViewController.h; sourceTree = "<group>"; };
 		3C5AA91D1F78FAFF00B7B9C4 /* CIColorPolynomialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIColorPolynomialViewController.m; sourceTree = "<group>"; };
+		3C5AA91F1F79091E00B7B9C4 /* CIColorControlsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIColorControlsViewController.h; sourceTree = "<group>"; };
+		3C5AA9201F79091E00B7B9C4 /* CIColorControlsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIColorControlsViewController.m; sourceTree = "<group>"; };
 		3C6119871F66595E006338C6 /* CIBloomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIBloomViewController.h; sourceTree = "<group>"; };
 		3C6119881F66595E006338C6 /* CIBloomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIBloomViewController.m; sourceTree = "<group>"; };
 		3C646BC31F6905D000429B2F /* CIColorCubeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIColorCubeViewController.h; sourceTree = "<group>"; };
@@ -407,6 +410,8 @@
 				3C5AA91A1F78F1CF00B7B9C4 /* CIVibranceViewController.m */,
 				3C5AA91C1F78FAFF00B7B9C4 /* CIColorPolynomialViewController.h */,
 				3C5AA91D1F78FAFF00B7B9C4 /* CIColorPolynomialViewController.m */,
+				3C5AA91F1F79091E00B7B9C4 /* CIColorControlsViewController.h */,
+				3C5AA9201F79091E00B7B9C4 /* CIColorControlsViewController.m */,
 			);
 			path = "单个滤镜";
 			sourceTree = "<group>";
@@ -638,6 +643,7 @@
 			files = (
 				3C1068BA1F63F76E00F301AD /* GeeV2Sample.m in Sources */,
 				3C7EF6231F5E4D1100B369F0 /* ViewController.m in Sources */,
+				3C5AA9211F79091E00B7B9C4 /* CIColorControlsViewController.m in Sources */,
 				3C1068CC1F63F7B300F301AD /* YYFilterAttributeModel.m in Sources */,
 				3C1068B91F63F76E00F301AD /* FPCameraBase.m in Sources */,
 				3C1068CD1F63F7B300F301AD /* YYFilterAttributeTableViewCell.m in Sources */,
