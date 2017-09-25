@@ -73,18 +73,7 @@
                            @"v":@"1",
                            },
                        ];
-    NSMutableArray *temp = [NSMutableArray array];
-    for (NSInteger i = 0; i < array.count; i ++) {
-        YYFilterAttributeModel *model = [YYFilterAttributeModel new];
-        NSDictionary *dict = array[i];
-        model.attributeName = dict[@"name"];
-        model.maxValue = [dict[@"max"] floatValue];
-        model.minValue = [dict[@"min"] floatValue];
-        model.value = [dict[@"v"] floatValue];
-        [temp addObject:model];
-    }
-    
-    self.filterAttributeModels = temp;
+    [self transitionModels:array];
     
     //颜色RGBA元素低于min值的增至min值，高于max值的降至max值
     
@@ -104,17 +93,7 @@
     [self.filter setValue:min forKey:@"inputMinComponents"];
     [self.filter setValue:max forKey:@"inputMaxComponents"];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        CIImage *outPutImage = self.filter.outputImage;
-        CIContext *context = [CIContext contextWithOptions:nil];
-        CGImageRef cg_image = [context createCGImage:outPutImage fromRect:_ci_image.extent];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            self.imageView.image = [UIImage imageWithCGImage:cg_image];
-            CGImageRelease(cg_image);
-        });
-    });
+    [self setOutputImage:_ci_image.extent];
 }
 
 @end
