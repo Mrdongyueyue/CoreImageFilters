@@ -1,14 +1,14 @@
 //
-//  CICircleSplashDistortionViewController.m
+//  CICrystallizeViewController.m
 //  滤镜demo
 //
-//  Created by 董知樾 on 2017/9/22.
+//  Created by 董知樾 on 2017/9/25.
 //  Copyright © 2017年 董知樾. All rights reserved.
 //
 
-#import "CICircleSplashDistortionViewController.h"
+#import "CICrystallizeViewController.h"
 
-@interface CICircleSplashDistortionViewController ()
+@interface CICrystallizeViewController ()
 
 @property (nonatomic, strong) CIVector *vector;
 
@@ -16,19 +16,21 @@
 
 @end
 
-@implementation CICircleSplashDistortionViewController
+@implementation CICrystallizeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _ci_image = [CIImage imageWithCGImage:self.imageView.image.CGImage];
+    [self.filter setValue:_ci_image forKey:kCIInputImageKey];
+    
     NSArray *array = @[
                        @{
                            @"name":@"inputRadius",
-                           @"max":@"1000",
-                           @"min":@"0",
-                           @"v":@"150",
+                           @"max":@"100",
+                           @"min":@"1",
+                           @"v":@"20",
                            },
-                       
                        ];
     NSMutableArray *temp = [NSMutableArray array];
     for (NSInteger i = 0; i < array.count; i ++) {
@@ -43,33 +45,29 @@
     
     self.filterAttributeModels = temp;
     
-    _ci_image = [CIImage imageWithCGImage:self.imageView.image.CGImage];
     [self refilter];
 }
 
 - (void)refilter {
-    if (!_vector) {
-        return;
-    }
-    CIImage *inputImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"IU1"].CGImage];
-    
-    [self.filter setValue:_vector forKey:kCIInputCenterKey];
     [self.filter setValue:@(self.filterAttributeModels[0].value) forKey:kCIInputRadiusKey];
-    [self.filter setValue:inputImage forKey:kCIInputImageKey];
+    [self.filter setValue:_vector forKey:kCIInputCenterKey];
     
-    CIImage *outPutImage = self.filter.outputImage;
-    
-    CGImageRef image = [self.context createCGImage:outPutImage fromRect:inputImage.extent];
-    
-    UIImage *f_image = [UIImage imageWithCGImage:image];
-    self.imageView.image = f_image;
-    CGImageRelease(image);
-    
-    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        CIImage *outPutImage = self.filter.outputImage;
+        CIContext *context = [CIContext contextWithOptions:nil];
+        CGImageRef cg_image = [context createCGImage:outPutImage fromRect:_ci_image.extent];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            self.imageView.image = [UIImage imageWithCGImage:cg_image];
+            CGImageRelease(cg_image);
+        });
+    });
     
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesMoved:touches withEvent:event];
     CGPoint point = [touches.anyObject locationInView:self.imageView];
     NSLog(@"%@", NSStringFromCGPoint(point));
     CGSize imageSize = _ci_image.extent.size;
@@ -86,15 +84,5 @@
     _vector = [CIVector vectorWithX:point.x Y:point.y];
     [self refilter];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

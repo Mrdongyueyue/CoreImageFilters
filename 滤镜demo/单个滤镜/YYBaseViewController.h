@@ -14,6 +14,10 @@
 
 @property (copy, nonatomic) NSString *filterName;
 
+@property (nonatomic, strong) CIFilter *filter;
+
+@property (nonatomic, strong) CIContext *context;
+
 @property (nonatomic, strong) UIImageView *imageView;
 
 @property (nonatomic, strong) NSArray<YYFilterAttributeModel *> *filterAttributeModels;

@@ -9,8 +9,7 @@
 #import "IUCollectionViewCell.h"
 
 @interface IUCollectionViewCell ()
-
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIView *line;
 @property (weak, nonatomic) IBOutlet UILabel *label;
 
 @end
@@ -29,7 +28,24 @@
 - (void)setFilterName:(NSString *)filterName {
     _filterName = filterName;
     
-    _label.text = filterName;
+    _line.hidden = YES;
+    NSString *className = [NSString stringWithFormat:@"%@ViewController", filterName];
+    Class vc_class = NSClassFromString(className);
+    NSDictionary *attribute = nil;
+    
+    if (vc_class) {
+        attribute = @{
+                      NSForegroundColorAttributeName : [UIColor whiteColor]
+                      };
+    } else {
+        attribute = @{
+                      NSStrikethroughStyleAttributeName : @(1),
+                      NSStrikethroughColorAttributeName : [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:0.95],
+                      NSForegroundColorAttributeName : [UIColor whiteColor]
+                      };
+    }
+    _label.attributedText = [[NSAttributedString alloc] initWithString:filterName attributes:attribute];;
+    
 }
 
 @end

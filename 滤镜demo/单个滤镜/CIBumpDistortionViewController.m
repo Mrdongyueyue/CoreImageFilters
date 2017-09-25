@@ -14,10 +14,6 @@
 
 @property (nonatomic, strong) CIImage *ci_image;
 
-@property (nonatomic, strong) CIContext *context;
-
-@property (nonatomic, strong) CIFilter *filter;
-
 @end
 
 @implementation CIBumpDistortionViewController
@@ -52,9 +48,9 @@
     
     self.filterAttributeModels = temp;
     self.imageView.image = [UIImage imageNamed:@"IU4"];
-    _context = [CIContext contextWithOptions:nil];
+    self.context = [CIContext contextWithOptions:nil];
     _ci_image = [CIImage imageWithCGImage:self.imageView.image.CGImage];
-    _filter = [CIFilter filterWithName:self.filterName];
+    self.filter = [CIFilter filterWithName:self.filterName];
     [self refilter];
 }
 
@@ -64,15 +60,15 @@
     }
     CIImage *inputImage = [CIImage imageWithCGImage:self.imageView.image.CGImage];
     
-    [_filter setValue:_vector forKey:kCIInputCenterKey];
-    [_filter setValue:@(self.filterAttributeModels[0].value) forKey:kCIInputRadiusKey];
-    [_filter setValue:@(self.filterAttributeModels[1].value) forKey:kCIInputScaleKey];
-    [_filter setValue:inputImage forKey:kCIInputImageKey];
+    [self.filter setValue:_vector forKey:kCIInputCenterKey];
+    [self.filter setValue:@(self.filterAttributeModels[0].value) forKey:kCIInputRadiusKey];
+    [self.filter setValue:@(self.filterAttributeModels[1].value) forKey:kCIInputScaleKey];
+    [self.filter setValue:inputImage forKey:kCIInputImageKey];
     
     
-    CIImage *outPutImage = _filter.outputImage;
+    CIImage *outPutImage = self.filter.outputImage;
     
-    CGImageRef image = [_context createCGImage:outPutImage fromRect:inputImage.extent];
+    CGImageRef image = [self.context createCGImage:outPutImage fromRect:inputImage.extent];
     
     UIImage *f_image = [UIImage imageWithCGImage:image];
     self.imageView.image = f_image;
@@ -87,11 +83,8 @@
     
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-}
-
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesMoved:touches withEvent:event];
     CGPoint point = [touches.anyObject locationInView:self.imageView];
     NSLog(@"%@", NSStringFromCGPoint(point));
     CGSize imageSize = _ci_image.extent.size;

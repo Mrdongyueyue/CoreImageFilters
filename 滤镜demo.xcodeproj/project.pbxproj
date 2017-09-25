@@ -46,6 +46,8 @@
 		3C57711C1F75155400AF7D0D /* CICircleSplashDistortionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C57711B1F75155400AF7D0D /* CICircleSplashDistortionViewController.m */; };
 		3C57711F1F75193500AF7D0D /* CIColorBlendModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C57711E1F75193500AF7D0D /* CIColorBlendModeViewController.m */; };
 		3C5771221F7519D100AF7D0D /* CIColorBurnBlendModeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5771211F7519D100AF7D0D /* CIColorBurnBlendModeViewController.m */; };
+		3C5AA90F1F78CF8500B7B9C4 /* IUCollectionViewHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AA90E1F78CF8500B7B9C4 /* IUCollectionViewHeader.m */; };
+		3C5AA9121F78DA8000B7B9C4 /* CICrystallizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5AA9111F78DA8000B7B9C4 /* CICrystallizeViewController.m */; };
 		3C6119891F66595E006338C6 /* CIBloomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C6119881F66595E006338C6 /* CIBloomViewController.m */; };
 		3C646BC51F6905D000429B2F /* CIColorCubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C646BC41F6905D000429B2F /* CIColorCubeViewController.m */; };
 		3C7EF6201F5E4D1100B369F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF61F1F5E4D1100B369F0 /* AppDelegate.m */; };
@@ -148,6 +150,10 @@
 		3C57711E1F75193500AF7D0D /* CIColorBlendModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIColorBlendModeViewController.m; sourceTree = "<group>"; };
 		3C5771201F7519D100AF7D0D /* CIColorBurnBlendModeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIColorBurnBlendModeViewController.h; sourceTree = "<group>"; };
 		3C5771211F7519D100AF7D0D /* CIColorBurnBlendModeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIColorBurnBlendModeViewController.m; sourceTree = "<group>"; };
+		3C5AA90D1F78CF8500B7B9C4 /* IUCollectionViewHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IUCollectionViewHeader.h; sourceTree = "<group>"; };
+		3C5AA90E1F78CF8500B7B9C4 /* IUCollectionViewHeader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IUCollectionViewHeader.m; sourceTree = "<group>"; };
+		3C5AA9101F78DA8000B7B9C4 /* CICrystallizeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CICrystallizeViewController.h; sourceTree = "<group>"; };
+		3C5AA9111F78DA8000B7B9C4 /* CICrystallizeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CICrystallizeViewController.m; sourceTree = "<group>"; };
 		3C6119871F66595E006338C6 /* CIBloomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIBloomViewController.h; sourceTree = "<group>"; };
 		3C6119881F66595E006338C6 /* CIBloomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIBloomViewController.m; sourceTree = "<group>"; };
 		3C646BC31F6905D000429B2F /* CIColorCubeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIColorCubeViewController.h; sourceTree = "<group>"; };
@@ -321,6 +327,8 @@
 				3C47C2FA1F67DDB6000FFEB0 /* ViewController.storyboard */,
 				3C7EF6501F5E50F000B369F0 /* IUCollectionViewCell.h */,
 				3C7EF6511F5E50F000B369F0 /* IUCollectionViewCell.m */,
+				3C5AA90D1F78CF8500B7B9C4 /* IUCollectionViewHeader.h */,
+				3C5AA90E1F78CF8500B7B9C4 /* IUCollectionViewHeader.m */,
 				3C7EF6531F5E53A100B369F0 /* IUViewController.h */,
 				3C7EF6541F5E53A100B369F0 /* IUViewController.m */,
 				3C7EF6271F5E4D1100B369F0 /* Assets.xcassets */,
@@ -377,6 +385,8 @@
 				3C57711E1F75193500AF7D0D /* CIColorBlendModeViewController.m */,
 				3C5771201F7519D100AF7D0D /* CIColorBurnBlendModeViewController.h */,
 				3C5771211F7519D100AF7D0D /* CIColorBurnBlendModeViewController.m */,
+				3C5AA9101F78DA8000B7B9C4 /* CICrystallizeViewController.h */,
+				3C5AA9111F78DA8000B7B9C4 /* CICrystallizeViewController.m */,
 			);
 			path = "单个滤镜";
 			sourceTree = "<group>";
@@ -615,6 +625,7 @@
 				3C5771221F7519D100AF7D0D /* CIColorBurnBlendModeViewController.m in Sources */,
 				3C1068BB1F63F76E00F301AD /* SampleBase.m in Sources */,
 				3C1068D11F63F7CE00F301AD /* CIAdditionCompositingViewController.m in Sources */,
+				3C5AA9121F78DA8000B7B9C4 /* CICrystallizeViewController.m in Sources */,
 				3C6119891F66595E006338C6 /* CIBloomViewController.m in Sources */,
 				3C1068E41F64078A00F301AD /* ZXPUnicode.m in Sources */,
 				3C57711C1F75155400AF7D0D /* CICircleSplashDistortionViewController.m in Sources */,
@@ -631,6 +642,7 @@
 				3C1068E21F6404AF00F301AD /* CIBarsSwipeTransitionViewController.m in Sources */,
 				3C5771191F750E1F00AF7D0D /* CICheckerboardGeneratorViewController.m in Sources */,
 				3C7EF6201F5E4D1100B369F0 /* AppDelegate.m in Sources */,
+				3C5AA90F1F78CF8500B7B9C4 /* IUCollectionViewHeader.m in Sources */,
 				3C1068DF1F6403F300F301AD /* CIAffineTileViewController.m in Sources */,
 				3C7EF6591F5E68D100B369F0 /* YYBaseViewController.m in Sources */,
 				3C1068C91F63F7B300F301AD /* FPCameraView.m in Sources */,

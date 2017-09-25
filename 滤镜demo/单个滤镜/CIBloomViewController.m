@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *array = @[//0.76 0.6
+    NSArray *array = @[
                        @{
                            @"name":@"color_intensity",
                            @"max":@"1",

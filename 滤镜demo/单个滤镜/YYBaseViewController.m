@@ -39,6 +39,9 @@ static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableView
     [NSLayoutConstraint activateConstraints:@[top, bottom, leading, trailing]];
     
     self.title = _filterName;
+    _filter = [CIFilter filterWithName:_filterName];
+    _context = [CIContext contextWithOptions:nil];
+    NSLog(@"%@", _filter.attributes);
     
     [self createAttributesOption];
 }
