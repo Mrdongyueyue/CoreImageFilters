@@ -13,28 +13,22 @@
 #import "IUViewController.h"
 #import "YYBaseViewController.h"
 #import "FPCameraBase.h"
-#import <TuSDK/TuSDK.h>
-#import "GeeV2Sample.h"
 
-@interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, TuSDKFilterManagerDelegate>
-
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
-@property (nonatomic, strong) NSArray<NSString *> *categorys;
-@property (nonatomic, strong) NSMutableArray<NSArray *> *filterNames;
+@interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    __weak IBOutlet UICollectionView *_collectionView;
+    NSArray<NSString *> *_categorys;
+    NSMutableArray<NSArray *> *_filterNames;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"CIFilter List";
     [self configFilterNames];
-    
-    
-}
-
-- (void)onTuSDKFilterManagerInited:(TuSDKFilterManager *)manager {
     
 }
 

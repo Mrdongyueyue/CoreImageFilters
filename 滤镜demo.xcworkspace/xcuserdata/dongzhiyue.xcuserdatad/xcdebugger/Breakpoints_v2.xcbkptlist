@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/ViewController.m"
-            timestampString = "528026381.344779"
+            timestampString = "528089948.775705"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
             landmarkName = "-viewDidLoad"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/YYBaseViewController.m"
-            timestampString = "528026381.345054"
+            timestampString = "528089948.776175"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "-viewWillLayoutSubviews"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/view-model/YYCameraView.m"
-            timestampString = "527767458.429832"
+            timestampString = "528089729.298312"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "151"
@@ -129,38 +129,6 @@
             endingLineNumber = "132"
             landmarkName = "-glkView:drawInRect:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__58-[CIBarsSwipeTransitionViewController glkView:drawInRect:]_block_invoke"
-                  moduleName = "&#x6ee4;&#x955c;demo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dongzhiyue/Desktop/demo/%E6%97%A5%E5%B8%B8%E7%BB%83%E4%B9%A0demo/demo5-0/%E6%BB%A4%E9%95%9Cdemo/%E6%BB%A4%E9%95%9Cdemo/%E5%8D%95%E4%B8%AA%E6%BB%A4%E9%95%9C/CIBarsSwipeTransitionViewController.m"
-                  timestampString = "528026381.599873"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "132"
-                  endingLineNumber = "132"
-                  offsetFromSymbolStart = "164">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__58-[CIBarsSwipeTransitionViewController glkView:drawInRect:]_block_invoke_2"
-                  moduleName = "&#x6ee4;&#x955c;demo"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dongzhiyue/Desktop/demo/%E6%97%A5%E5%B8%B8%E7%BB%83%E4%B9%A0demo/demo5-0/%E6%BB%A4%E9%95%9Cdemo/%E6%BB%A4%E9%95%9Cdemo/%E5%8D%95%E4%B8%AA%E6%BB%A4%E9%95%9C/CIBarsSwipeTransitionViewController.m"
-                  timestampString = "528026381.601489"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "134"
-                  endingLineNumber = "134"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -223,6 +191,102 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6ee4;&#x955c;demo/ViewController.m"
+            timestampString = "528089948.776454"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/Blur/CIBoxBlurViewController.m"
+            timestampString = "528096308.007379"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/Blur/CIDepthBlurEffectViewController.m"
+            timestampString = "528100014.883945"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/Blur/CIDepthBlurEffectViewController.m"
+            timestampString = "528100014.884431"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/ColorAdjustment/CIColorMatrixViewController.m"
+            timestampString = "528100014.884798"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6ee4;&#x955c;demo/ViewController.m"
+            timestampString = "528100266.92651"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "-collectionView:cellForItemAtIndexPath:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

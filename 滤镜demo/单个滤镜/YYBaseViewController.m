@@ -8,6 +8,7 @@
 
 #import "YYBaseViewController.h"
 #import "YYFilterAttributeTableViewCell.h"
+#import "YYWebViewController.h"
 
 static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableViewCellID";
 
@@ -42,6 +43,8 @@ static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableView
     _filter = [CIFilter filterWithName:_filterName];
     _context = [CIContext contextWithOptions:nil];
     NSLog(@"%@", _filter.attributes);
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"safari"] style:UIBarButtonItemStylePlain target:self action:@selector(safariItemClick:)];
     
     [self createAttributesOption];
 }
@@ -110,6 +113,13 @@ static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableView
         _optionsTableViewBottom.constant = t_bottom;
         [self.view layoutIfNeeded];
     }];
+}
+
+- (void)safariItemClick:(UIBarButtonItem *)item {
+    YYWebViewController *vc = [[YYWebViewController alloc] init];
+    vc.title = _filterName;
+    vc.url = _filter.attributes[kCIAttributeReferenceDocumentation];
+    [self showViewController:vc sender:nil];
 }
 
 //MARK:~~~~ UITableViewDataSource, UITableViewDelegate ~~~~
