@@ -83,21 +83,21 @@
 
 - (void)configFilterNames {
     _categorys = @[
-                           @"CICategoryBlur",
-                           @"CICategoryColorAdjustment",
-                           @"CICategoryColorEffect",
-                           @"CICategoryCompositeOperation",
-                           @"CICategoryDistortionEffect",
-                           @"CICategoryGenerator",
-                           @"CICategoryGeometryAdjustment",
-                           @"CICategoryGradient",
-                           @"CICategoryHalftoneEffect",
-                           @"CICategoryReduction",
-                           @"CICategorySharpen",
-                           @"CICategoryStylize",
-                           @"CICategoryTileEffect",
-                           @"CICategoryTransition",
-                           ];
+                   @"CICategoryBlur",
+                   @"CICategoryColorAdjustment",
+                   @"CICategoryColorEffect",
+                   @"CICategoryCompositeOperation",
+                   @"CICategoryDistortionEffect",
+                   @"CICategoryGenerator",
+                   @"CICategoryGeometryAdjustment",
+                   @"CICategoryGradient",
+                   @"CICategoryHalftoneEffect",
+                   @"CICategoryReduction",
+                   @"CICategorySharpen",
+                   @"CICategoryStylize",
+                   @"CICategoryTileEffect",
+                   @"CICategoryTransition",
+                   ];
     _filterNames = [NSMutableArray array];
     for (NSString *c in _categorys) {
         [_filterNames addObject:[CIFilter filterNamesInCategory:c]];
