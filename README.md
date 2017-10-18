@@ -104,7 +104,16 @@ iOS-CoreImage滤镜开发
     };
 }
 ```
-##### `CIColorMatrix`滤镜是一个4*5的矩阵，分别
+##### `CIColorMatrix`滤镜是一个4*5的矩阵，分别RGBA和矢量，其公式为
+```
+s.r = dot(s, redVector)
+s.g = dot(s, greenVector)
+s.b = dot(s, blueVector)
+s.a = dot(s, alphaVector)
+s = s + bias
+```
+##### 即点乘 表达式为`r = (r * x) + (r * y) + (r * z) + (r * w) + bias`
+
 
 #### 3.CIVector
 #### 4.CIDetector和CIFeature
