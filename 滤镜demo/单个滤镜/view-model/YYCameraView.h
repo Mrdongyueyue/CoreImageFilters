@@ -15,12 +15,19 @@
 #define iOS_10 (NO)
 #endif
 
+@protocol YYCameraViewDelegate<NSObject>
+
+- (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
+
+@end
 @interface YYCameraView : UIView
 
 /**
  当前摄像头 default AVCaptureDevicePositionFront 前置
  */
 @property (nonatomic, assign, readonly) AVCaptureDevicePosition devicePosition;
+
+@property (nonatomic, weak) id<YYCameraViewDelegate> delegate;
 
 - (void)takePhotoComplete:(void (^)(UIImage *image, NSError *error))complete;
 

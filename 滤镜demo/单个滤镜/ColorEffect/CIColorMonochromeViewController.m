@@ -11,7 +11,6 @@
 #import <Masonry.h>
 #import <AVFoundation/AVFoundation.h>
 #import <CoreVideo/CoreVideo.h>
-#import <TuSDKGeeV1/TuSDKGeeV1.h>
 #import "GPUImageBeautifyFilter.h"
 #import "FPImageFilter.h"
 #import "FPCameraView.h"
@@ -28,8 +27,6 @@
 @property (nonatomic, strong) AVCapturePhoto *photo;
 
 @property (nonatomic, strong) UIImage *image;
-
-@property (nonatomic, strong) TuSDKCPPhotoEditMultipleComponent *photoEditMultipleComponent;
 
 @end
 

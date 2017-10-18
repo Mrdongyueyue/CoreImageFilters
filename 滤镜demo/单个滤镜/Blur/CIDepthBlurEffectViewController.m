@@ -7,16 +7,19 @@
 //
 
 #import "CIDepthBlurEffectViewController.h"
+@import GLKit;
+@import AVFoundation;
+@import CoreMedia;
 
 @interface CIDepthBlurEffectViewController ()
 
-@property (nonatomic, strong) CIImage *ci_image;
-
-@property (nonatomic, strong) CIDetector *detector;
-
 @end
 
-@implementation CIDepthBlurEffectViewController
+@implementation CIDepthBlurEffectViewController {
+    CIImage *_ci_image;
+    CIDetector *_detector;
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,6 +70,7 @@
     
     [self refilter];
 }
+
 
 - (void)refilter {
     

@@ -1,5 +1,5 @@
 target '滤镜demo' do
-    #pod 'GPUImage'
+    pod 'GPUImage'
     pod 'Masonry'
-    pod 'TuSDK'
+#    pod 'TuSDK'
 end

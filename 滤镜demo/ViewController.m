@@ -12,7 +12,6 @@
 #import "IUCollectionViewHeader.h"
 #import "IUViewController.h"
 #import "YYBaseViewController.h"
-#import "FPCameraBase.h"
 
 @interface ViewController ()<UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 

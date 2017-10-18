@@ -125,6 +125,10 @@
 
 //MARK:--- AVCaptureVideoDataOutputSampleBufferDelegate ~~~~
 - (void)captureOutput:(AVCaptureOutput *)output didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
+    if (_delegate && [_delegate respondsToSelector:@selector(captureOutput:didOutputSampleBuffer:fromConnection:)]) {
+        [_delegate captureOutput:output didOutputSampleBuffer:sampleBuffer fromConnection:connection];
+        return;
+    }
     CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     CIImage *image = [CIImage imageWithCVImageBuffer:imageBuffer];
     

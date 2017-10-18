@@ -36,7 +36,7 @@
     if ((width % n != 0) || (height % n != 0) || (rowNum * columnNum != n))
     {
         NSLog(@"Invalid colorLUT");
-//        return;
+        return;
     }
     
     //要讀取每個pixel的RGBA值，必須先把UIImage轉成bitmap
@@ -109,8 +109,8 @@
     CGContextRef context = NULL;
     CGColorSpaceRef colorSpace;
     unsigned char *bitmap;
-    int bitmapSize;
-    int bytesPerRow;
+    size_t bitmapSize;
+    size_t bytesPerRow;
     
     size_t width = CGImageGetWidth(image);
     size_t height = CGImageGetHeight(image);

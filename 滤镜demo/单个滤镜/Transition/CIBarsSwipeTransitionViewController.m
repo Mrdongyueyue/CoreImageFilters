@@ -79,6 +79,7 @@
 }
 
 - (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
     
     self.glkView.frame = self.view.bounds;
 }

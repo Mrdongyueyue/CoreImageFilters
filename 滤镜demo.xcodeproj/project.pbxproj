@@ -25,10 +25,6 @@
 		3C1068B61F63F76E00F301AD /* sample_photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068981F63F76D00F301AD /* sample_photo.jpg */; };
 		3C1068B71F63F76E00F301AD /* sample_watermark.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068991F63F76D00F301AD /* sample_watermark.png */; };
 		3C1068B81F63F76E00F301AD /* TuSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3C10689A1F63F76D00F301AD /* TuSDK.bundle */; };
-		3C1068B91F63F76E00F301AD /* FPCameraBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C10689F1F63F76E00F301AD /* FPCameraBase.m */; };
-		3C1068BA1F63F76E00F301AD /* GeeV2Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068A11F63F76E00F301AD /* GeeV2Sample.m */; };
-		3C1068BB1F63F76E00F301AD /* SampleBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068A31F63F76E00F301AD /* SampleBase.m */; };
-		3C1068BC1F63F76E00F301AD /* TuSDKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068A51F63F76E00F301AD /* TuSDKViewController.m */; };
 		3C1068C91F63F7B300F301AD /* FPCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068BF1F63F7B300F301AD /* FPCameraView.m */; };
 		3C1068CA1F63F7B300F301AD /* FPImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068C11F63F7B300F301AD /* FPImageFilter.m */; };
 		3C1068CB1F63F7B300F301AD /* GPUImageBeautifyFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068C31F63F7B300F301AD /* GPUImageBeautifyFilter.m */; };
@@ -44,6 +40,8 @@
 		3C5CAFD51F7A1F29007763FB /* CIMaskedVariableBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CAFD41F7A1F29007763FB /* CIMaskedVariableBlurViewController.m */; };
 		3C5CAFD81F7A20B7007763FB /* CIMedianFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CAFD71F7A20B7007763FB /* CIMedianFilterViewController.m */; };
 		3C5CAFDB1F7A2609007763FB /* CIColorMatrixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CAFDA1F7A2609007763FB /* CIColorMatrixViewController.m */; };
+		3C5CAFDE1F7A2C4B007763FB /* CIDepthToDisparityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CAFDD1F7A2C4B007763FB /* CIDepthToDisparityViewController.m */; };
+		3C5CAFE11F7A5A3C007763FB /* CIGaussianGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CAFE01F7A5A3C007763FB /* CIGaussianGradientViewController.m */; };
 		3C7EF6201F5E4D1100B369F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF61F1F5E4D1100B369F0 /* AppDelegate.m */; };
 		3C7EF6231F5E4D1100B369F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF6221F5E4D1100B369F0 /* ViewController.m */; };
 		3C7EF6281F5E4D1100B369F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7EF6271F5E4D1100B369F0 /* Assets.xcassets */; };
@@ -125,14 +123,6 @@
 		3C10689A1F63F76D00F301AD /* TuSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TuSDK.bundle; sourceTree = "<group>"; };
 		3C10689B1F63F76E00F301AD /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3C10689C1F63F76E00F301AD /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		3C10689E1F63F76E00F301AD /* FPCameraBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCameraBase.h; sourceTree = "<group>"; };
-		3C10689F1F63F76E00F301AD /* FPCameraBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCameraBase.m; sourceTree = "<group>"; };
-		3C1068A01F63F76E00F301AD /* GeeV2Sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeeV2Sample.h; sourceTree = "<group>"; };
-		3C1068A11F63F76E00F301AD /* GeeV2Sample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeeV2Sample.m; sourceTree = "<group>"; };
-		3C1068A21F63F76E00F301AD /* SampleBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleBase.h; sourceTree = "<group>"; };
-		3C1068A31F63F76E00F301AD /* SampleBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleBase.m; sourceTree = "<group>"; };
-		3C1068A41F63F76E00F301AD /* TuSDKViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TuSDKViewController.h; sourceTree = "<group>"; };
-		3C1068A51F63F76E00F301AD /* TuSDKViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TuSDKViewController.m; sourceTree = "<group>"; };
 		3C1068BE1F63F7B300F301AD /* FPCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPCameraView.h; sourceTree = "<group>"; };
 		3C1068BF1F63F7B300F301AD /* FPCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPCameraView.m; sourceTree = "<group>"; };
 		3C1068C01F63F7B300F301AD /* FPImageFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPImageFilter.h; sourceTree = "<group>"; };
@@ -160,6 +150,10 @@
 		3C5CAFD71F7A20B7007763FB /* CIMedianFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIMedianFilterViewController.m; sourceTree = "<group>"; };
 		3C5CAFD91F7A2609007763FB /* CIColorMatrixViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIColorMatrixViewController.h; sourceTree = "<group>"; };
 		3C5CAFDA1F7A2609007763FB /* CIColorMatrixViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIColorMatrixViewController.m; sourceTree = "<group>"; };
+		3C5CAFDC1F7A2C4B007763FB /* CIDepthToDisparityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIDepthToDisparityViewController.h; sourceTree = "<group>"; };
+		3C5CAFDD1F7A2C4B007763FB /* CIDepthToDisparityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIDepthToDisparityViewController.m; sourceTree = "<group>"; };
+		3C5CAFDF1F7A5A3C007763FB /* CIGaussianGradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIGaussianGradientViewController.h; sourceTree = "<group>"; };
+		3C5CAFE01F7A5A3C007763FB /* CIGaussianGradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIGaussianGradientViewController.m; sourceTree = "<group>"; };
 		3C7EF61B1F5E4D1100B369F0 /* 滤镜demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "滤镜demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7EF61E1F5E4D1100B369F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C7EF61F1F5E4D1100B369F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -298,21 +292,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		3C10689D1F63F76E00F301AD /* TuSDK */ = {
-			isa = PBXGroup;
-			children = (
-				3C10689E1F63F76E00F301AD /* FPCameraBase.h */,
-				3C10689F1F63F76E00F301AD /* FPCameraBase.m */,
-				3C1068A01F63F76E00F301AD /* GeeV2Sample.h */,
-				3C1068A11F63F76E00F301AD /* GeeV2Sample.m */,
-				3C1068A21F63F76E00F301AD /* SampleBase.h */,
-				3C1068A31F63F76E00F301AD /* SampleBase.m */,
-				3C1068A41F63F76E00F301AD /* TuSDKViewController.h */,
-				3C1068A51F63F76E00F301AD /* TuSDKViewController.m */,
-			);
-			path = TuSDK;
-			sourceTree = "<group>";
-		};
 		3C1068BD1F63F7B300F301AD /* view-model */ = {
 			isa = PBXGroup;
 			children = (
@@ -360,7 +339,6 @@
 			children = (
 				3C1068E31F64078A00F301AD /* ZXPUnicode.m */,
 				3C1068841F63F76D00F301AD /* Resources */,
-				3C10689D1F63F76E00F301AD /* TuSDK */,
 				3C7EF6561F5E68BA00B369F0 /* 单个滤镜 */,
 				3C7EF61E1F5E4D1100B369F0 /* AppDelegate.h */,
 				3C7EF61F1F5E4D1100B369F0 /* AppDelegate.m */,
@@ -477,6 +455,8 @@
 		3CA5F3601F79E57B0072A846 /* Gradient */ = {
 			isa = PBXGroup;
 			children = (
+				3C5CAFDF1F7A5A3C007763FB /* CIGaussianGradientViewController.h */,
+				3C5CAFE01F7A5A3C007763FB /* CIGaussianGradientViewController.m */,
 			);
 			path = Gradient;
 			sourceTree = "<group>";
@@ -545,6 +525,8 @@
 				3C5CAFDA1F7A2609007763FB /* CIColorMatrixViewController.m */,
 				3CA5F36F1F79E57B0072A846 /* CIColorPolynomialViewController.h */,
 				3CA5F3701F79E57B0072A846 /* CIColorPolynomialViewController.m */,
+				3C5CAFDC1F7A2C4B007763FB /* CIDepthToDisparityViewController.h */,
+				3C5CAFDD1F7A2C4B007763FB /* CIDepthToDisparityViewController.m */,
 				3CA5F3711F79E57B0072A846 /* CITemperatureAndTintViewController.h */,
 				3CA5F3721F79E57B0072A846 /* CITemperatureAndTintViewController.m */,
 				3CA5F3731F79E57B0072A846 /* CIVibranceViewController.h */,
@@ -666,6 +648,7 @@
 				TargetAttributes = {
 					3C7EF61A1F5E4D1100B369F0 = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 					};
 					3C7EF6321F5E4D1100B369F0 = {
 						CreatedOnToolsVersion = 9.0;
@@ -673,6 +656,7 @@
 					};
 					3C7EF63D1F5E4D1100B369F0 = {
 						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 3C7EF61A1F5E4D1100B369F0;
 					};
 				};
@@ -752,9 +736,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-滤镜demo/Pods-滤镜demo-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -782,13 +773,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-滤镜demo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -798,7 +792,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C1068BA1F63F76E00F301AD /* GeeV2Sample.m in Sources */,
+				3C5CAFE11F7A5A3C007763FB /* CIGaussianGradientViewController.m in Sources */,
 				3CA5F3811F79E57C0072A846 /* CIBarsSwipeTransitionViewController.m in Sources */,
 				3C7EF6231F5E4D1100B369F0 /* ViewController.m in Sources */,
 				3C5CAFDB1F7A2609007763FB /* CIColorMatrixViewController.m in Sources */,
@@ -809,14 +803,13 @@
 				3CA5F3831F79E57C0072A846 /* CICircleSplashDistortionViewController.m in Sources */,
 				3CA5F3801F79E57C0072A846 /* CIColorMonochromeViewController.m in Sources */,
 				3CA5F3981F79F6710072A846 /* CIBoxBlurViewController.m in Sources */,
-				3C1068B91F63F76E00F301AD /* FPCameraBase.m in Sources */,
 				3CA5F3891F79E57C0072A846 /* CITemperatureAndTintViewController.m in Sources */,
 				3CA5F3851F79E57C0072A846 /* CICheckerboardGeneratorViewController.m in Sources */,
 				3C5CAFD51F7A1F29007763FB /* CIMaskedVariableBlurViewController.m in Sources */,
 				3CA5F38A1F79E57C0072A846 /* CIVibranceViewController.m in Sources */,
 				3C1068CD1F63F7B300F301AD /* YYFilterAttributeTableViewCell.m in Sources */,
 				3C1068CB1F63F7B300F301AD /* GPUImageBeautifyFilter.m in Sources */,
-				3C1068BB1F63F76E00F301AD /* SampleBase.m in Sources */,
+				3C5CAFDE1F7A2C4B007763FB /* CIDepthToDisparityViewController.m in Sources */,
 				3CA5F3871F79E57C0072A846 /* CIColorControlsViewController.m in Sources */,
 				3C5CAFCF1F7A1BF6007763FB /* CIDiscBlurViewController.m in Sources */,
 				3C1068E41F64078A00F301AD /* ZXPUnicode.m in Sources */,
@@ -832,7 +825,6 @@
 				3C7EF6521F5E50F000B369F0 /* IUCollectionViewCell.m in Sources */,
 				3CA5F38C1F79E57C0072A846 /* CIColorBlendModeViewController.m in Sources */,
 				3CA5F37D1F79E57C0072A846 /* CIBloomViewController.m in Sources */,
-				3C1068BC1F63F76E00F301AD /* TuSDKViewController.m in Sources */,
 				3CA5F39B1F79F92C0072A846 /* CIDepthBlurEffectViewController.m in Sources */,
 				3CA5F38D1F79E57C0072A846 /* CIColorBurnBlendModeViewController.m in Sources */,
 				3CA5F3821F79E57C0072A846 /* CIBumpDistortionViewController.m in Sources */,
@@ -928,7 +920,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dongguan Fengqun Supply Chain Technology Co., Ltd. (G8855GBF39)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -950,6 +942,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "7ae4ae3e-fd67-4679-833b-0b9f870430b6";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -983,7 +976,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dongguan Fengqun Supply Chain Technology Co., Ltd. (G8855GBF39)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -998,6 +991,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "7ae4ae3e-fd67-4679-833b-0b9f870430b6";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1008,6 +1002,9 @@
 			baseConfigurationReference = 3BA52D21A9B7B0C12BA3E969 /* Pods-滤镜demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8855GBF39;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1016,8 +1013,28 @@
 				INFOPLIST_FILE = "滤镜demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"GPUImage\"",
+					"-l\"Masonry\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.filterDemo.yue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1027,6 +1044,9 @@
 			baseConfigurationReference = E45F7D5D775B8C34B91EE287 /* Pods-滤镜demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dongguan Fengqun Supply Chain Technology Co., Ltd. (G8855GBF39)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G8855GBF39;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1035,8 +1055,33 @@
 				INFOPLIST_FILE = "滤镜demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/GPUImage\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Masonry\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"GPUImage\"",
+					"-l\"Masonry\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"CoreMedia\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"OpenGLES\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.filterDemo.yue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1045,7 +1090,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = H874NRF4RE;
+				DEVELOPMENT_TEAM = G8855GBF39;
 				INFOPLIST_FILE = "滤镜demoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yue.--demoTests";
@@ -1059,7 +1104,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = H874NRF4RE;
+				DEVELOPMENT_TEAM = G8855GBF39;
 				INFOPLIST_FILE = "滤镜demoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yue.--demoTests";
@@ -1072,11 +1117,14 @@
 		3C7EF64E1F5E4D1100B369F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = H874NRF4RE;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8855GBF39;
 				INFOPLIST_FILE = "滤镜demoUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yue.--demoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "滤镜demo";
 			};
@@ -1085,11 +1133,14 @@
 		3C7EF64F1F5E4D1100B369F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = H874NRF4RE;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G8855GBF39;
 				INFOPLIST_FILE = "滤镜demoUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.yue.--demoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "滤镜demo";
 			};
