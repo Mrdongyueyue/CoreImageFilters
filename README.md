@@ -1,8 +1,6 @@
-# CoreImageFilter-demo
 ---
 iOS-CoreImage滤镜开发
 ---
-#### CoreImage的滤镜使用，持续更新
 #### 在iOS中要进行滤镜开发大概有3种方式
     1.CoreImage
     2.OpenGL
@@ -104,7 +102,7 @@ iOS-CoreImage滤镜开发
     };
 }
 ```
-##### `CIColorMatrix`滤镜是一个4*5的矩阵，分别RGBA和矢量，其公式为
+##### `CIColorMatrix`滤镜可以用5个1*4的矩阵表示，分别代表RGBA的矢量和偏移量，其算法为
 ```
 s.r = dot(s, redVector)
 s.g = dot(s, greenVector)
@@ -112,8 +110,69 @@ s.b = dot(s, blueVector)
 s.a = dot(s, alphaVector)
 s = s + bias
 ```
-##### 即点乘 表达式为`r = (r * x) + (r * y) + (r * z) + (r * w) + bias`
+##### 假设 `s`为一个像素的色值，
+```
+s = [r, g, b, a]
+redVector = [x, y, z, w]
+bias = [b0, b1, b2, b3]
+```
+##### 则`r`的表达式为`r = (r * x) + (g * y) + (b * z) + (a * w) + b0`,通过这种方法修改每个像素的色值
+##### 要设计一款滤镜并不容易，我在GitHub上找到了一个有多个滤镜的demo：[wangyingbo](https://github.com/wangyingbo)所开源的[YBPasterImage](https://github.com/wangyingbo/YBPasterImage)中，有十三款色彩滤镜[ColorMatrix.h](https://github.com/wangyingbo/YBPasterImage/blob/master/testPasterImage/Libs/FilterImageLibs/ColorMatrix.h)，以第一个为例
+```
+// 1、LOMO
+const float colormatrix_lomo[] = {
+    1.7f,  0.1f,   0.1f,   0,    -73.1f,
+    0,     1.7f,   0.1f,   0,    -73.1f,
+    0,     0.1f,   1.6f,   0,    -73.1f,
+    0,     0,      0,      1.0f, 0
+  };
+```
+|  x  |  y  |  z  |  w  |  bias  |
+|-----|:---:|:---:|:---:|:------:|
+| 1.7 | 0.1 | 0.1 |  0  |  -73.1 |
+|  0  | 1.7 | 0.1 |  0  |  -73.1 |
+|  0  | 0.1 | 1.6 |  0  |  -73.1 |
+|  0  |  0  |  0  | 1.0 |   0    |
 
+##### 作者[wangyingbo](https://github.com/wangyingbo)是使用`OpenGL`所实现的效果（[代码](https://github.com/wangyingbo/YBPasterImage/blob/master/testPasterImage/Libs/FilterImageLibs/ImageUtil.m)），而非`CoreImage`，使用`CoreImage`来实现只需做如下的修改：
+```
+// 1、LOMO
+colormatrix_lomo = @{
+  @"style":@"LOMO",
+  @"r":[CIVector vectorWithX:1.7 Y:0.1 Z:0.1 W:0],
+  @"g":[CIVector vectorWithX:0 Y:1.7 Z:0.1 W:0],
+  @"b":[CIVector vectorWithX:0 Y:0.1 Z:1.6 W:0],
+  @"a":[CIVector vectorWithX:0 Y:0 Z:0 W:1.0],
+  @"bias":[CIVector vectorWithX:-73.1/255 Y:-73.1/255 Z:-73.1/255 W:0]
+}
 
-#### 3.CIVector
+[self.filter setValue:colormatrix_lomo[@"r"] forKey:@"inputRVector"];
+[self.filter setValue:colormatrix_lomo[@"g"] forKey:@"inputGVector"];
+[self.filter setValue:colormatrix_lomo[@"b"] forKey:@"inputBVector"];
+[self.filter setValue:colormatrix_lomo[@"a"] forKey:@"inputAVector"];
+[self.filter setValue:colormatrix_lomo[@"bias"] forKey:@"inputBiasVector"];
+```
+
+#### 3.　`CIVector`，向量对象，有如下的构造方法：
+```
++ (instancetype)vectorWithValues:(const CGFloat *)values count:(size_t)count;
+
++ (instancetype)vectorWithX:(CGFloat)x;
++ (instancetype)vectorWithX:(CGFloat)x Y:(CGFloat)y;
++ (instancetype)vectorWithX:(CGFloat)x Y:(CGFloat)y Z:(CGFloat)z;
++ (instancetype)vectorWithX:(CGFloat)x Y:(CGFloat)y Z:(CGFloat)z W:(CGFloat)w;
+
+/* the CGPoint x and y values are stored in the first X and Y values of the CIVector. */
++ (instancetype)vectorWithCGPoint:(CGPoint)p NS_AVAILABLE(10_9, 5_0);
+
+/* the CGRect x, y, width, height values are stored in the first X, Y, Z, W values of the CIVector. */
++ (instancetype)vectorWithCGRect:(CGRect)r NS_AVAILABLE(10_9, 5_0);
+
+/* the CGAffineTransform's six values are stored in the first six values of the CIVector. */
++ (instancetype)vectorWithCGAffineTransform:(CGAffineTransform)t NS_AVAILABLE(10_9, 5_0);
+
++ (instancetype)vectorWithString:(NSString *)representation;
+```
+##### 在图片处理的众多方法中，会常常使用到矩阵的概念，而矩阵在C语言中可用数组表达，在`CoreImage`中苹果提供了`CIVector`这样一个类来表示矩阵
+
 #### 4.CIDetector和CIFeature
