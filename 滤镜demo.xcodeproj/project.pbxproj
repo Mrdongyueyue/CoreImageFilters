@@ -79,6 +79,12 @@
 		3CA5F3951F79F3BC0072A846 /* CIBokehBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA5F3941F79F3BC0072A846 /* CIBokehBlurViewController.m */; };
 		3CA5F3981F79F6710072A846 /* CIBoxBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA5F3971F79F6710072A846 /* CIBoxBlurViewController.m */; };
 		3CA5F39B1F79F92C0072A846 /* CIDepthBlurEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA5F39A1F79F92C0072A846 /* CIDepthBlurEffectViewController.m */; };
+		3CBA6EBB1FA3209400C8BA3A /* CIMorphologyGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA6EBA1FA3209400C8BA3A /* CIMorphologyGradientViewController.m */; };
+		3CBA6EBE1FA322CA00C8BA3A /* CIMorphologyMaximumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA6EBD1FA322CA00C8BA3A /* CIMorphologyMaximumViewController.m */; };
+		3CBA6EC11FA3235200C8BA3A /* CIMorphologyMinimumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA6EC01FA3235200C8BA3A /* CIMorphologyMinimumViewController.m */; };
+		3CBA6EC41FA3240400C8BA3A /* CIMotionBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA6EC31FA3240400C8BA3A /* CIMotionBlurViewController.m */; };
+		3CBA6EC71FA3249900C8BA3A /* CINoiseReductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA6EC61FA3249900C8BA3A /* CINoiseReductionViewController.m */; };
+		3CBA6ECA1FA3256400C8BA3A /* CIZoomBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA6EC91FA3256400C8BA3A /* CIZoomBlurViewController.m */; };
 		3CBC3F351F99EDD2000E9A5B /* CIConvolution3X3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC3F341F99EDD2000E9A5B /* CIConvolution3X3ViewController.m */; };
 		8F7F38E627A163E90051C468 /* libPods-滤镜demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF130310B5F3051E4718C18 /* libPods-滤镜demo.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -224,6 +230,18 @@
 		3CA5F3971F79F6710072A846 /* CIBoxBlurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIBoxBlurViewController.m; sourceTree = "<group>"; };
 		3CA5F3991F79F92C0072A846 /* CIDepthBlurEffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIDepthBlurEffectViewController.h; sourceTree = "<group>"; };
 		3CA5F39A1F79F92C0072A846 /* CIDepthBlurEffectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIDepthBlurEffectViewController.m; sourceTree = "<group>"; };
+		3CBA6EB91FA3209400C8BA3A /* CIMorphologyGradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIMorphologyGradientViewController.h; sourceTree = "<group>"; };
+		3CBA6EBA1FA3209400C8BA3A /* CIMorphologyGradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIMorphologyGradientViewController.m; sourceTree = "<group>"; };
+		3CBA6EBC1FA322CA00C8BA3A /* CIMorphologyMaximumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIMorphologyMaximumViewController.h; sourceTree = "<group>"; };
+		3CBA6EBD1FA322CA00C8BA3A /* CIMorphologyMaximumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIMorphologyMaximumViewController.m; sourceTree = "<group>"; };
+		3CBA6EBF1FA3235200C8BA3A /* CIMorphologyMinimumViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIMorphologyMinimumViewController.h; sourceTree = "<group>"; };
+		3CBA6EC01FA3235200C8BA3A /* CIMorphologyMinimumViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIMorphologyMinimumViewController.m; sourceTree = "<group>"; };
+		3CBA6EC21FA3240400C8BA3A /* CIMotionBlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIMotionBlurViewController.h; sourceTree = "<group>"; };
+		3CBA6EC31FA3240400C8BA3A /* CIMotionBlurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIMotionBlurViewController.m; sourceTree = "<group>"; };
+		3CBA6EC51FA3249900C8BA3A /* CINoiseReductionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CINoiseReductionViewController.h; sourceTree = "<group>"; };
+		3CBA6EC61FA3249900C8BA3A /* CINoiseReductionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CINoiseReductionViewController.m; sourceTree = "<group>"; };
+		3CBA6EC81FA3256400C8BA3A /* CIZoomBlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIZoomBlurViewController.h; sourceTree = "<group>"; };
+		3CBA6EC91FA3256400C8BA3A /* CIZoomBlurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIZoomBlurViewController.m; sourceTree = "<group>"; };
 		3CBC3F331F99EDD2000E9A5B /* CIConvolution3X3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIConvolution3X3ViewController.h; sourceTree = "<group>"; };
 		3CBC3F341F99EDD2000E9A5B /* CIConvolution3X3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIConvolution3X3ViewController.m; sourceTree = "<group>"; };
 		E45F7D5D775B8C34B91EE287 /* Pods-滤镜demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-滤镜demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-滤镜demo/Pods-滤镜demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -515,6 +533,18 @@
 				3C5CAFD41F7A1F29007763FB /* CIMaskedVariableBlurViewController.m */,
 				3C5CAFD61F7A20B7007763FB /* CIMedianFilterViewController.h */,
 				3C5CAFD71F7A20B7007763FB /* CIMedianFilterViewController.m */,
+				3CBA6EB91FA3209400C8BA3A /* CIMorphologyGradientViewController.h */,
+				3CBA6EBA1FA3209400C8BA3A /* CIMorphologyGradientViewController.m */,
+				3CBA6EBC1FA322CA00C8BA3A /* CIMorphologyMaximumViewController.h */,
+				3CBA6EBD1FA322CA00C8BA3A /* CIMorphologyMaximumViewController.m */,
+				3CBA6EBF1FA3235200C8BA3A /* CIMorphologyMinimumViewController.h */,
+				3CBA6EC01FA3235200C8BA3A /* CIMorphologyMinimumViewController.m */,
+				3CBA6EC21FA3240400C8BA3A /* CIMotionBlurViewController.h */,
+				3CBA6EC31FA3240400C8BA3A /* CIMotionBlurViewController.m */,
+				3CBA6EC51FA3249900C8BA3A /* CINoiseReductionViewController.h */,
+				3CBA6EC61FA3249900C8BA3A /* CINoiseReductionViewController.m */,
+				3CBA6EC81FA3256400C8BA3A /* CIZoomBlurViewController.h */,
+				3CBA6EC91FA3256400C8BA3A /* CIZoomBlurViewController.m */,
 			);
 			path = Blur;
 			sourceTree = "<group>";
@@ -799,7 +829,9 @@
 			files = (
 				3C5CAFE11F7A5A3C007763FB /* CIGaussianGradientViewController.m in Sources */,
 				3CA5F3811F79E57C0072A846 /* CIBarsSwipeTransitionViewController.m in Sources */,
+				3CBA6EC71FA3249900C8BA3A /* CINoiseReductionViewController.m in Sources */,
 				3C7EF6231F5E4D1100B369F0 /* ViewController.m in Sources */,
+				3CBA6EC11FA3235200C8BA3A /* CIMorphologyMinimumViewController.m in Sources */,
 				3C5CAFDB1F7A2609007763FB /* CIColorMatrixViewController.m in Sources */,
 				3C5CAFD81F7A20B7007763FB /* CIMedianFilterViewController.m in Sources */,
 				3C1068CC1F63F7B300F301AD /* YYFilterAttributeModel.m in Sources */,
@@ -809,10 +841,12 @@
 				3CA5F3801F79E57C0072A846 /* CIColorMonochromeViewController.m in Sources */,
 				3CA5F3981F79F6710072A846 /* CIBoxBlurViewController.m in Sources */,
 				3CA5F3891F79E57C0072A846 /* CITemperatureAndTintViewController.m in Sources */,
+				3CBA6ECA1FA3256400C8BA3A /* CIZoomBlurViewController.m in Sources */,
 				3CA5F3851F79E57C0072A846 /* CICheckerboardGeneratorViewController.m in Sources */,
 				3C5CAFD51F7A1F29007763FB /* CIMaskedVariableBlurViewController.m in Sources */,
 				3CA5F38A1F79E57C0072A846 /* CIVibranceViewController.m in Sources */,
 				3C1068CD1F63F7B300F301AD /* YYFilterAttributeTableViewCell.m in Sources */,
+				3CBA6EC41FA3240400C8BA3A /* CIMotionBlurViewController.m in Sources */,
 				3C1068CB1F63F7B300F301AD /* GPUImageBeautifyFilter.m in Sources */,
 				3C5CAFDE1F7A2C4B007763FB /* CIDepthToDisparityViewController.m in Sources */,
 				3CA5F3871F79E57C0072A846 /* CIColorControlsViewController.m in Sources */,
@@ -821,6 +855,7 @@
 				3CA5F3841F79E57C0072A846 /* CIAffineTileViewController.m in Sources */,
 				3CA5F37F1F79E57C0072A846 /* CIColorCubeViewController.m in Sources */,
 				3C7EF62E1F5E4D1100B369F0 /* main.m in Sources */,
+				3CBA6EBB1FA3209400C8BA3A /* CIMorphologyGradientViewController.m in Sources */,
 				3CA5F3911F79EA960072A846 /* YYWebViewController.m in Sources */,
 				3CBC3F351F99EDD2000E9A5B /* CIConvolution3X3ViewController.m in Sources */,
 				3CA5F37E1F79E57C0072A846 /* CICrystallizeViewController.m in Sources */,
@@ -828,6 +863,7 @@
 				3CA5F38B1F79E57C0072A846 /* CIAdditionCompositingViewController.m in Sources */,
 				3C47C2F81F67D37D000FFEB0 /* YYCameraView.m in Sources */,
 				3C1068CA1F63F7B300F301AD /* FPImageFilter.m in Sources */,
+				3CBA6EBE1FA322CA00C8BA3A /* CIMorphologyMaximumViewController.m in Sources */,
 				3C7EF6521F5E50F000B369F0 /* IUCollectionViewCell.m in Sources */,
 				3CA5F38C1F79E57C0072A846 /* CIColorBlendModeViewController.m in Sources */,
 				3CA5F37D1F79E57C0072A846 /* CIBloomViewController.m in Sources */,

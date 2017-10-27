@@ -10,6 +10,7 @@
 @import GLKit;
 @import AVFoundation;
 @import CoreMedia;
+@import Vision;
 
 @interface CIDepthBlurEffectViewController ()
 
@@ -82,6 +83,7 @@
 }
 
 /*
+ need Vision framework
  inputAuxDataMetadata : NSDictionary 未知
  inputCalibrationData : AVCameraCalibrationData 未知
  inputChinPositions : CIVector "下巴位置" 未知

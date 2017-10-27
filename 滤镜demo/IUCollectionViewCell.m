@@ -40,7 +40,7 @@
     } else {
         attribute = @{
                       NSStrikethroughStyleAttributeName : @(1),
-                      NSStrikethroughColorAttributeName : [UIColor colorWithRed:0.95 green:0.95 blue:0.95 alpha:0.95],
+                      NSStrikethroughColorAttributeName : [UIColor colorWithRed:0.85 green:0.85 blue:0.85 alpha:0.95],
                       NSForegroundColorAttributeName : [UIColor whiteColor]
                       };
     }
