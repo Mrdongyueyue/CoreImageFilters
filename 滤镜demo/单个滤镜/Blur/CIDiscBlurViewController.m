@@ -30,7 +30,6 @@
     _ci_image = [CIImage imageWithCGImage:self.imageView.image.CGImage];
     [self.filter setValue:_ci_image forKey:kCIInputImageKey];
     
-    //圆形卷积核？模糊
     [self refilter];
 }
 

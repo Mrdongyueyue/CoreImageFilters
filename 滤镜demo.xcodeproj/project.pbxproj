@@ -79,6 +79,7 @@
 		3CA5F3951F79F3BC0072A846 /* CIBokehBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA5F3941F79F3BC0072A846 /* CIBokehBlurViewController.m */; };
 		3CA5F3981F79F6710072A846 /* CIBoxBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA5F3971F79F6710072A846 /* CIBoxBlurViewController.m */; };
 		3CA5F39B1F79F92C0072A846 /* CIDepthBlurEffectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA5F39A1F79F92C0072A846 /* CIDepthBlurEffectViewController.m */; };
+		3CBC3F351F99EDD2000E9A5B /* CIConvolution3X3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC3F341F99EDD2000E9A5B /* CIConvolution3X3ViewController.m */; };
 		8F7F38E627A163E90051C468 /* libPods-滤镜demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF130310B5F3051E4718C18 /* libPods-滤镜demo.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -223,6 +224,8 @@
 		3CA5F3971F79F6710072A846 /* CIBoxBlurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIBoxBlurViewController.m; sourceTree = "<group>"; };
 		3CA5F3991F79F92C0072A846 /* CIDepthBlurEffectViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIDepthBlurEffectViewController.h; sourceTree = "<group>"; };
 		3CA5F39A1F79F92C0072A846 /* CIDepthBlurEffectViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIDepthBlurEffectViewController.m; sourceTree = "<group>"; };
+		3CBC3F331F99EDD2000E9A5B /* CIConvolution3X3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIConvolution3X3ViewController.h; sourceTree = "<group>"; };
+		3CBC3F341F99EDD2000E9A5B /* CIConvolution3X3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIConvolution3X3ViewController.m; sourceTree = "<group>"; };
 		E45F7D5D775B8C34B91EE287 /* Pods-滤镜demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-滤镜demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-滤镜demo/Pods-滤镜demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -410,6 +413,8 @@
 				3CA5F34F1F79E57B0072A846 /* CIBloomViewController.m */,
 				3CA5F3501F79E57B0072A846 /* CICrystallizeViewController.h */,
 				3CA5F3511F79E57B0072A846 /* CICrystallizeViewController.m */,
+				3CBC3F331F99EDD2000E9A5B /* CIConvolution3X3ViewController.h */,
+				3CBC3F341F99EDD2000E9A5B /* CIConvolution3X3ViewController.m */,
 			);
 			path = Stylize;
 			sourceTree = "<group>";
@@ -817,6 +822,7 @@
 				3CA5F37F1F79E57C0072A846 /* CIColorCubeViewController.m in Sources */,
 				3C7EF62E1F5E4D1100B369F0 /* main.m in Sources */,
 				3CA5F3911F79EA960072A846 /* YYWebViewController.m in Sources */,
+				3CBC3F351F99EDD2000E9A5B /* CIConvolution3X3ViewController.m in Sources */,
 				3CA5F37E1F79E57C0072A846 /* CICrystallizeViewController.m in Sources */,
 				3CA5F3951F79F3BC0072A846 /* CIBokehBlurViewController.m in Sources */,
 				3CA5F38B1F79E57C0072A846 /* CIAdditionCompositingViewController.m in Sources */,
