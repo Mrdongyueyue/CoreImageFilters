@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/YYBaseViewController.m"
-            timestampString = "530777358.096239"
+            timestampString = "530788657.224264"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "51"
             endingLineNumber = "51"
-            landmarkName = "-viewWillLayoutSubviews"
-            landmarkType = "7">
+            landmarkName = "YYBaseViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -232,7 +232,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/Blur/CIDepthBlurEffectViewController.m"
-            timestampString = "530785815.506845"
+            timestampString = "530790883.378281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "66"
@@ -248,7 +248,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/Blur/CIDepthBlurEffectViewController.m"
-            timestampString = "530785815.506933"
+            timestampString = "530790883.378352"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -344,7 +344,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/ColorEffect/CIColorCubeViewController.m"
-            timestampString = "530777358.096763"
+            timestampString = "531050903.440276"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "172"
@@ -360,7 +360,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/ColorEffect/CIColorCubeViewController.m"
-            timestampString = "530777358.097131"
+            timestampString = "531050903.440668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
@@ -376,7 +376,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/ColorEffect/CIColorCubeViewController.m"
-            timestampString = "530777358.097388"
+            timestampString = "531050903.440939"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "150"
@@ -398,6 +398,70 @@
             startingLineNumber = "64"
             endingLineNumber = "64"
             landmarkName = "-collectionView:shouldHighlightItemAtIndexPath:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/view-model/FPCameraView.m"
+            timestampString = "530790883.378633"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "-takePhotoComplete:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/view-model/FPCameraView.m"
+            timestampString = "530790883.378689"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-setupAV"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/ColorAdjustment/CIDisparityToDepthViewController.m"
+            timestampString = "531025030.753214"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "CIDisparityToDepthViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "&#x6ee4;&#x955c;demo/&#x5355;&#x4e2a;&#x6ee4;&#x955c;/ColorAdjustment/CIDisparityToDepthViewController.m"
+            timestampString = "531025030.753604"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "-depthDataOutput:didOutputDepthData:timestamp:connection:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

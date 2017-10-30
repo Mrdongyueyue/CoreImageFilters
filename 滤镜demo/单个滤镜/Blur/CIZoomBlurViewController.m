@@ -4,7 +4,7 @@
 //
 //  Created by 董知樾 on 2017/10/27.
 //  Copyright © 2017年 董知樾. All rights reserved.
-//
+//  晃瞎狗眼的模糊缩放
 
 #import "CIZoomBlurViewController.h"
 

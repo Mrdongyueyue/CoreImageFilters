@@ -42,6 +42,14 @@
 		3C5CAFDB1F7A2609007763FB /* CIColorMatrixViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CAFDA1F7A2609007763FB /* CIColorMatrixViewController.m */; };
 		3C5CAFDE1F7A2C4B007763FB /* CIDepthToDisparityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CAFDD1F7A2C4B007763FB /* CIDepthToDisparityViewController.m */; };
 		3C5CAFE11F7A5A3C007763FB /* CIGaussianGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5CAFE01F7A5A3C007763FB /* CIGaussianGradientViewController.m */; };
+		3C71CAF91FA6CCD70015D9A4 /* CIExposureAdjustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71CAF81FA6CCD70015D9A4 /* CIExposureAdjustViewController.m */; };
+		3C71CAFC1FA6CD750015D9A4 /* CIGammaAdjustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71CAFB1FA6CD750015D9A4 /* CIGammaAdjustViewController.m */; };
+		3C71CAFF1FA6CE590015D9A4 /* CIHueAdjustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71CAFE1FA6CE590015D9A4 /* CIHueAdjustViewController.m */; };
+		3C71CB021FA6CF7A0015D9A4 /* CILinearToSRGBToneCurveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71CB011FA6CF7A0015D9A4 /* CILinearToSRGBToneCurveViewController.m */; };
+		3C71CB051FA6F8910015D9A4 /* CIWhitePointAdjustViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71CB041FA6F8910015D9A4 /* CIWhitePointAdjustViewController.m */; };
+		3C71CB081FA6FAC90015D9A4 /* CISRGBToneCurveToLinearViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71CB071FA6FAC90015D9A4 /* CISRGBToneCurveToLinearViewController.m */; };
+		3C71CB0B1FA6FB810015D9A4 /* CIToneCurveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71CB0A1FA6FB810015D9A4 /* CIToneCurveViewController.m */; };
+		3C71CB0E1FA730EE0015D9A4 /* UIImage+Rotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C71CB0C1FA730EE0015D9A4 /* UIImage+Rotate.m */; };
 		3C7EF6201F5E4D1100B369F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF61F1F5E4D1100B369F0 /* AppDelegate.m */; };
 		3C7EF6231F5E4D1100B369F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EF6221F5E4D1100B369F0 /* ViewController.m */; };
 		3C7EF6281F5E4D1100B369F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7EF6271F5E4D1100B369F0 /* Assets.xcassets */; };
@@ -85,6 +93,7 @@
 		3CBA6EC41FA3240400C8BA3A /* CIMotionBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA6EC31FA3240400C8BA3A /* CIMotionBlurViewController.m */; };
 		3CBA6EC71FA3249900C8BA3A /* CINoiseReductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA6EC61FA3249900C8BA3A /* CINoiseReductionViewController.m */; };
 		3CBA6ECA1FA3256400C8BA3A /* CIZoomBlurViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA6EC91FA3256400C8BA3A /* CIZoomBlurViewController.m */; };
+		3CBA6ECD1FA3284700C8BA3A /* CIDisparityToDepthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBA6ECC1FA3284700C8BA3A /* CIDisparityToDepthViewController.m */; };
 		3CBC3F351F99EDD2000E9A5B /* CIConvolution3X3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC3F341F99EDD2000E9A5B /* CIConvolution3X3ViewController.m */; };
 		8F7F38E627A163E90051C468 /* libPods-滤镜demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF130310B5F3051E4718C18 /* libPods-滤镜demo.a */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
@@ -161,6 +170,22 @@
 		3C5CAFDD1F7A2C4B007763FB /* CIDepthToDisparityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIDepthToDisparityViewController.m; sourceTree = "<group>"; };
 		3C5CAFDF1F7A5A3C007763FB /* CIGaussianGradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIGaussianGradientViewController.h; sourceTree = "<group>"; };
 		3C5CAFE01F7A5A3C007763FB /* CIGaussianGradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIGaussianGradientViewController.m; sourceTree = "<group>"; };
+		3C71CAF71FA6CCD70015D9A4 /* CIExposureAdjustViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIExposureAdjustViewController.h; sourceTree = "<group>"; };
+		3C71CAF81FA6CCD70015D9A4 /* CIExposureAdjustViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIExposureAdjustViewController.m; sourceTree = "<group>"; };
+		3C71CAFA1FA6CD750015D9A4 /* CIGammaAdjustViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIGammaAdjustViewController.h; sourceTree = "<group>"; };
+		3C71CAFB1FA6CD750015D9A4 /* CIGammaAdjustViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIGammaAdjustViewController.m; sourceTree = "<group>"; };
+		3C71CAFD1FA6CE590015D9A4 /* CIHueAdjustViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIHueAdjustViewController.h; sourceTree = "<group>"; };
+		3C71CAFE1FA6CE590015D9A4 /* CIHueAdjustViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIHueAdjustViewController.m; sourceTree = "<group>"; };
+		3C71CB001FA6CF7A0015D9A4 /* CILinearToSRGBToneCurveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CILinearToSRGBToneCurveViewController.h; sourceTree = "<group>"; };
+		3C71CB011FA6CF7A0015D9A4 /* CILinearToSRGBToneCurveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CILinearToSRGBToneCurveViewController.m; sourceTree = "<group>"; };
+		3C71CB031FA6F8910015D9A4 /* CIWhitePointAdjustViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIWhitePointAdjustViewController.h; sourceTree = "<group>"; };
+		3C71CB041FA6F8910015D9A4 /* CIWhitePointAdjustViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIWhitePointAdjustViewController.m; sourceTree = "<group>"; };
+		3C71CB061FA6FAC90015D9A4 /* CISRGBToneCurveToLinearViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CISRGBToneCurveToLinearViewController.h; sourceTree = "<group>"; };
+		3C71CB071FA6FAC90015D9A4 /* CISRGBToneCurveToLinearViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CISRGBToneCurveToLinearViewController.m; sourceTree = "<group>"; };
+		3C71CB091FA6FB810015D9A4 /* CIToneCurveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIToneCurveViewController.h; sourceTree = "<group>"; };
+		3C71CB0A1FA6FB810015D9A4 /* CIToneCurveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIToneCurveViewController.m; sourceTree = "<group>"; };
+		3C71CB0C1FA730EE0015D9A4 /* UIImage+Rotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Rotate.m"; sourceTree = "<group>"; };
+		3C71CB0D1FA730EE0015D9A4 /* UIImage+Rotate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Rotate.h"; sourceTree = "<group>"; };
 		3C7EF61B1F5E4D1100B369F0 /* 滤镜demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "滤镜demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7EF61E1F5E4D1100B369F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3C7EF61F1F5E4D1100B369F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -242,6 +267,8 @@
 		3CBA6EC61FA3249900C8BA3A /* CINoiseReductionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CINoiseReductionViewController.m; sourceTree = "<group>"; };
 		3CBA6EC81FA3256400C8BA3A /* CIZoomBlurViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIZoomBlurViewController.h; sourceTree = "<group>"; };
 		3CBA6EC91FA3256400C8BA3A /* CIZoomBlurViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIZoomBlurViewController.m; sourceTree = "<group>"; };
+		3CBA6ECB1FA3284700C8BA3A /* CIDisparityToDepthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIDisparityToDepthViewController.h; sourceTree = "<group>"; };
+		3CBA6ECC1FA3284700C8BA3A /* CIDisparityToDepthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIDisparityToDepthViewController.m; sourceTree = "<group>"; };
 		3CBC3F331F99EDD2000E9A5B /* CIConvolution3X3ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIConvolution3X3ViewController.h; sourceTree = "<group>"; };
 		3CBC3F341F99EDD2000E9A5B /* CIConvolution3X3ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIConvolution3X3ViewController.m; sourceTree = "<group>"; };
 		E45F7D5D775B8C34B91EE287 /* Pods-滤镜demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-滤镜demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-滤镜demo/Pods-滤镜demo.release.xcconfig"; sourceTree = "<group>"; };
@@ -359,6 +386,8 @@
 			isa = PBXGroup;
 			children = (
 				3C1068E31F64078A00F301AD /* ZXPUnicode.m */,
+				3C71CB0D1FA730EE0015D9A4 /* UIImage+Rotate.h */,
+				3C71CB0C1FA730EE0015D9A4 /* UIImage+Rotate.m */,
 				3C1068841F63F76D00F301AD /* Resources */,
 				3C7EF6561F5E68BA00B369F0 /* 单个滤镜 */,
 				3C7EF61E1F5E4D1100B369F0 /* AppDelegate.h */,
@@ -562,10 +591,26 @@
 				3CA5F3701F79E57B0072A846 /* CIColorPolynomialViewController.m */,
 				3C5CAFDC1F7A2C4B007763FB /* CIDepthToDisparityViewController.h */,
 				3C5CAFDD1F7A2C4B007763FB /* CIDepthToDisparityViewController.m */,
+				3CBA6ECB1FA3284700C8BA3A /* CIDisparityToDepthViewController.h */,
+				3CBA6ECC1FA3284700C8BA3A /* CIDisparityToDepthViewController.m */,
+				3C71CAF71FA6CCD70015D9A4 /* CIExposureAdjustViewController.h */,
+				3C71CAF81FA6CCD70015D9A4 /* CIExposureAdjustViewController.m */,
+				3C71CAFA1FA6CD750015D9A4 /* CIGammaAdjustViewController.h */,
+				3C71CAFB1FA6CD750015D9A4 /* CIGammaAdjustViewController.m */,
+				3C71CAFD1FA6CE590015D9A4 /* CIHueAdjustViewController.h */,
+				3C71CAFE1FA6CE590015D9A4 /* CIHueAdjustViewController.m */,
+				3C71CB001FA6CF7A0015D9A4 /* CILinearToSRGBToneCurveViewController.h */,
+				3C71CB011FA6CF7A0015D9A4 /* CILinearToSRGBToneCurveViewController.m */,
+				3C71CB061FA6FAC90015D9A4 /* CISRGBToneCurveToLinearViewController.h */,
+				3C71CB071FA6FAC90015D9A4 /* CISRGBToneCurveToLinearViewController.m */,
 				3CA5F3711F79E57B0072A846 /* CITemperatureAndTintViewController.h */,
 				3CA5F3721F79E57B0072A846 /* CITemperatureAndTintViewController.m */,
+				3C71CB091FA6FB810015D9A4 /* CIToneCurveViewController.h */,
+				3C71CB0A1FA6FB810015D9A4 /* CIToneCurveViewController.m */,
 				3CA5F3731F79E57B0072A846 /* CIVibranceViewController.h */,
 				3CA5F3741F79E57B0072A846 /* CIVibranceViewController.m */,
+				3C71CB031FA6F8910015D9A4 /* CIWhitePointAdjustViewController.h */,
+				3C71CB041FA6F8910015D9A4 /* CIWhitePointAdjustViewController.m */,
 			);
 			path = ColorAdjustment;
 			sourceTree = "<group>";
@@ -837,11 +882,14 @@
 				3C1068CC1F63F7B300F301AD /* YYFilterAttributeModel.m in Sources */,
 				3CA5F3881F79E57C0072A846 /* CIColorPolynomialViewController.m in Sources */,
 				3C5CAFD21F7A1C74007763FB /* CIGaussianBlurViewController.m in Sources */,
+				3C71CB0B1FA6FB810015D9A4 /* CIToneCurveViewController.m in Sources */,
 				3CA5F3831F79E57C0072A846 /* CICircleSplashDistortionViewController.m in Sources */,
+				3CBA6ECD1FA3284700C8BA3A /* CIDisparityToDepthViewController.m in Sources */,
 				3CA5F3801F79E57C0072A846 /* CIColorMonochromeViewController.m in Sources */,
 				3CA5F3981F79F6710072A846 /* CIBoxBlurViewController.m in Sources */,
 				3CA5F3891F79E57C0072A846 /* CITemperatureAndTintViewController.m in Sources */,
 				3CBA6ECA1FA3256400C8BA3A /* CIZoomBlurViewController.m in Sources */,
+				3C71CB021FA6CF7A0015D9A4 /* CILinearToSRGBToneCurveViewController.m in Sources */,
 				3CA5F3851F79E57C0072A846 /* CICheckerboardGeneratorViewController.m in Sources */,
 				3C5CAFD51F7A1F29007763FB /* CIMaskedVariableBlurViewController.m in Sources */,
 				3CA5F38A1F79E57C0072A846 /* CIVibranceViewController.m in Sources */,
@@ -858,8 +906,10 @@
 				3CBA6EBB1FA3209400C8BA3A /* CIMorphologyGradientViewController.m in Sources */,
 				3CA5F3911F79EA960072A846 /* YYWebViewController.m in Sources */,
 				3CBC3F351F99EDD2000E9A5B /* CIConvolution3X3ViewController.m in Sources */,
+				3C71CB051FA6F8910015D9A4 /* CIWhitePointAdjustViewController.m in Sources */,
 				3CA5F37E1F79E57C0072A846 /* CICrystallizeViewController.m in Sources */,
 				3CA5F3951F79F3BC0072A846 /* CIBokehBlurViewController.m in Sources */,
+				3C71CB081FA6FAC90015D9A4 /* CISRGBToneCurveToLinearViewController.m in Sources */,
 				3CA5F38B1F79E57C0072A846 /* CIAdditionCompositingViewController.m in Sources */,
 				3C47C2F81F67D37D000FFEB0 /* YYCameraView.m in Sources */,
 				3C1068CA1F63F7B300F301AD /* FPImageFilter.m in Sources */,
@@ -867,10 +917,14 @@
 				3C7EF6521F5E50F000B369F0 /* IUCollectionViewCell.m in Sources */,
 				3CA5F38C1F79E57C0072A846 /* CIColorBlendModeViewController.m in Sources */,
 				3CA5F37D1F79E57C0072A846 /* CIBloomViewController.m in Sources */,
+				3C71CAFC1FA6CD750015D9A4 /* CIGammaAdjustViewController.m in Sources */,
 				3CA5F39B1F79F92C0072A846 /* CIDepthBlurEffectViewController.m in Sources */,
 				3CA5F38D1F79E57C0072A846 /* CIColorBurnBlendModeViewController.m in Sources */,
+				3C71CAF91FA6CCD70015D9A4 /* CIExposureAdjustViewController.m in Sources */,
+				3C71CAFF1FA6CE590015D9A4 /* CIHueAdjustViewController.m in Sources */,
 				3CA5F3821F79E57C0072A846 /* CIBumpDistortionViewController.m in Sources */,
 				3CA5F3861F79E57C0072A846 /* CIColorClampViewController.m in Sources */,
+				3C71CB0E1FA730EE0015D9A4 /* UIImage+Rotate.m in Sources */,
 				3C7EF6551F5E53A100B369F0 /* IUViewController.m in Sources */,
 				3C7EF6201F5E4D1100B369F0 /* AppDelegate.m in Sources */,
 				3C5AA90F1F78CF8500B7B9C4 /* IUCollectionViewHeader.m in Sources */,

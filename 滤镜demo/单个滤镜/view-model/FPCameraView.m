@@ -60,12 +60,15 @@
 - (void)setupAV {
     //        AVCaptureDevicePositionBack  后置摄像头
     //        AVCaptureDevicePositionFront 前置摄像头
-    self.device = [self cameraWithPosition:AVCaptureDevicePositionFront];
+    self.device = [self cameraWithPosition:AVCaptureDevicePositionBack];
     _devicePosition = AVCaptureDevicePositionFront;
     self.input = [[AVCaptureDeviceInput alloc] initWithDevice:self.device error:nil];
     
 #if iOS_11
     self.imageOutput = [[AVCapturePhotoOutput alloc] init];
+    if (self.imageOutput.isDepthDataDeliverySupported) {
+        self.imageOutput.depthDataDeliveryEnabled = YES;
+    }
 #else
     self.imageOutput = [[AVCaptureStillImageOutput alloc] init];
 #endif
@@ -116,6 +119,7 @@
 
 #if iOS_11
 - (void)takePhotoComplete:(void (^)(AVCapturePhoto *, NSError *))complete {
+    
     AVCapturePhotoSettings *setting = [[AVCapturePhotoSettings alloc] init];
     
     NSDictionary *format = @{ (__bridge id)kCVPixelBufferPixelFormatTypeKey:setting.availablePreviewPhotoPixelFormatTypes.firstObject,
@@ -123,6 +127,10 @@
                               (__bridge id)kCVPixelBufferHeightKey :@(self.bounds.size.height)
                               };
     setting.previewPhotoFormat = format;
+    if (@available(iOS 11.0, *)) {
+        setting.embedsDepthDataInPhoto = YES;
+        setting.depthDataDeliveryEnabled = YES;
+    }
     if ([_imageOutput.supportedFlashModes containsObject:@(_flashMode)]) {
         setting.flashMode = _flashMode;
     }
@@ -227,6 +235,10 @@
 - (void)startRunning {
     [self.session startRunning];
     self.previewLayer.hidden = NO;
+}
+
+- (void)depthSupport {
+    
 }
 
 @end

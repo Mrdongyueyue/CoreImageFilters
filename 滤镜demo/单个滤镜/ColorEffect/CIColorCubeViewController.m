@@ -226,7 +226,7 @@ void rgbToHSV(float *rgb, float *hsv);
     
     CIFilter *sourceOverCompositing = [CIFilter filterWithName:@"CISourceOverCompositing"];
     [sourceOverCompositing setValue:outputImage forKey:kCIInputImageKey];
-    [sourceOverCompositing setValue:[CIImage imageWithCGImage:[UIImage imageNamed:@"flower_background"].CGImage] forKey:kCIInputBackgroundImageKey];
+    [sourceOverCompositing setValue:_backgroundImage forKey:kCIInputBackgroundImageKey];
     return sourceOverCompositing.outputImage;
 }
 
