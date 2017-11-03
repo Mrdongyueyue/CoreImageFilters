@@ -28,4 +28,6 @@
 /** 将图片旋转radians弧度 */
 - (UIImage *)imageRotatedByRadians:(CGFloat)radians;
 
++ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
+
 @end

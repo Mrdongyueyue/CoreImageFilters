@@ -250,4 +250,19 @@ static CGRect swapWidthAndHeight(CGRect rect)
     return rect;
 }
 
++ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size
+{
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
+
 @end
