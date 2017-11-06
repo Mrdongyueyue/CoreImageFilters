@@ -9,6 +9,8 @@
 #import "YYBaseViewController.h"
 #import "YYFilterAttributeTableViewCell.h"
 #import "YYWebViewController.h"
+#import "UIViewController+Extension.h"
+#import "YYDescriptionView.h"
 
 static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableViewCellID";
 
@@ -19,6 +21,8 @@ static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableView
 @property (nonatomic, strong) UITableView *optionsTableView;
 
 @property (nonatomic, weak) NSLayoutConstraint *optionsTableViewBottom;
+
+@property (nonatomic, strong) YYDescriptionView *descriptionView;
 
 @end
 
@@ -33,8 +37,15 @@ static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableView
     _imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view addSubview:_imageView];
     _imageView.translatesAutoresizingMaskIntoConstraints = NO;
-    NSLayoutConstraint *top = [_imageView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor];
-    NSLayoutConstraint *bottom = [_imageView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor];
+    NSLayoutConstraint *top = nil;
+    NSLayoutConstraint *bottom = nil;
+    if (@available(iOS 11.0, *)) {
+        top = [_imageView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor];
+        bottom = [_imageView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor];
+    } else {
+        top = [_imageView.topAnchor constraintEqualToAnchor:self.topLayoutGuide.bottomAnchor];
+        bottom = [_imageView.bottomAnchor constraintEqualToAnchor:self.bottomLayoutGuide.topAnchor];
+    }
     NSLayoutConstraint *leading = [_imageView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor];
     NSLayoutConstraint *trailing = [_imageView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor];
     [NSLayoutConstraint activateConstraints:@[top, bottom, leading, trailing]];
@@ -44,9 +55,12 @@ static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableView
     _context = [CIContext contextWithOptions:nil];
     NSLog(@"%@", _filter.attributes);
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"safari"] style:UIBarButtonItemStylePlain target:self action:@selector(safariItemClick:)];
+    UIBarButtonItem *safari = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"safari"] style:UIBarButtonItemStylePlain target:self action:@selector(safariItemClick:)];
+    UIBarButtonItem *description = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"description"] style:UIBarButtonItemStylePlain target:self action:@selector(descriptionItemClick:)];
+    self.navigationItem.rightBarButtonItems = @[safari, description];
     
     [self createAttributesOption];
+    [self addKeyboardCorverNotification];
 }
 
 - (void)viewWillLayoutSubviews {
@@ -60,6 +74,7 @@ static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableView
     _optionsTableView.delegate = self;
     _optionsTableView.dataSource = self;
     _optionsTableView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.5];
+    _optionsTableView.rowHeight = 60;
     [self.view addSubview:_optionsTableView];
     _optionsTableView.separatorColor = [UIColor whiteColor];
     [_optionsTableView registerNib:[UINib nibWithNibName:@"YYFilterAttributeTableViewCell" bundle:nil] forCellReuseIdentifier:YYFilterAttributeTableViewCellID];
@@ -67,7 +82,11 @@ static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableView
     {
         _optionsTableView.translatesAutoresizingMaskIntoConstraints = NO;
         
-        _optionsTableViewBottom = [_optionsTableView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor constant:300];
+        if (@available(iOS 11.0, *)) {
+            _optionsTableViewBottom = [_optionsTableView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor constant:300];
+        } else {
+            _optionsTableViewBottom = [_optionsTableView.bottomAnchor constraintEqualToAnchor:self.bottomLayoutGuide.topAnchor constant:300];
+        }
         NSLayoutConstraint *leading = [_optionsTableView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor];
         NSLayoutConstraint *trailing = [_optionsTableView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor];
         NSLayoutConstraint *height = [_optionsTableView.heightAnchor constraintEqualToConstant:300];
@@ -122,6 +141,15 @@ static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableView
     [self showViewController:vc sender:nil];
 }
 
+- (void)descriptionItemClick:(UIBarButtonItem *)item {
+    if (!_descriptionView) {
+        _descriptionView = [[YYDescriptionView alloc] init];
+        _descriptionView.viewController = self;
+        _descriptionView.text = self.filter.attributes.description;
+    }
+    [_descriptionView show];
+}
+
 //MARK:~~~~ UITableViewDataSource, UITableViewDelegate ~~~~
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _filterAttributeModels.count;
@@ -170,6 +198,10 @@ static NSString *YYFilterAttributeTableViewCellID = @"YYFilterAttributeTableView
             CGImageRelease(cg_image);
         });
     });
+}
+
+- (void)dealloc {
+    [self clearKeyboardCorverNotificationAndGesture];
 }
 
 @end
