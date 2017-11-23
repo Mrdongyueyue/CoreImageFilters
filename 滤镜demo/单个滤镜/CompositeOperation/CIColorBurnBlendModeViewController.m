@@ -21,7 +21,7 @@
 
 - (void)refilter {
     CIImage *inputImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"IU1"].CGImage];
-    CIImage *bImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"checkerBoard"].CGImage];
+    CIImage *bImage = [CIImage imageWithCGImage:[UIImage imageNamed:@"gradient01"].CGImage];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         CIFilter *filter = [CIFilter filterWithName:self.filterName];

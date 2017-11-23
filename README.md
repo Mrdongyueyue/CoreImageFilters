@@ -4,7 +4,7 @@ iOS-CoreImage滤镜开发
 #### 在iOS中要进行滤镜开发大概有3种方式
     1.CoreImage
     2.OpenGL
-    3.GPUImage或其他的第三方框架
+    3.GPUImage、OpenVC或其他的第三方框架
 #### 我在目前的项目中准备使用第一种，即`CoreImage`来进行滤镜开发
 #### 首先介绍一下进行滤镜开发所需要熟练掌握的知识和框架
     1.AVFoundtion

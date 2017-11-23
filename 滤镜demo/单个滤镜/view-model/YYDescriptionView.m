@@ -11,6 +11,7 @@
 
 @implementation YYDescriptionView {
     UITextView *_textView;
+    BOOL _isShowing;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -33,6 +34,9 @@
     _textView.layer.shadowOpacity = 0.8;
     _textView.layer.shadowOffset = CGSizeMake(2, 2);
     _textView.editable = NO;
+    if (@available(iOS 11.0, *)) {
+        _textView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    }
     
     [_textView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
@@ -64,7 +68,9 @@
 }
 
 - (void)show {
-    
+    if (_isShowing) {
+        return;
+    }
     if (!self.superview) {
         if (!_viewController) {
             return;
@@ -78,17 +84,17 @@
         }];
         [_viewController.view layoutIfNeeded];
     }
-    
+    _isShowing = YES;
     [self mas_updateConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(_viewController.mas_topLayoutGuideBottom);
+        make.top.equalTo(_viewController.mas_topLayoutGuideBottom).offset(10);
     }];
     
     [_viewController.view setNeedsUpdateConstraints];
     [_viewController.view updateConstraintsIfNeeded];
     
-    [UIView animateWithDuration:0.5  delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+    [UIView animateWithDuration:0.5 delay:0.0 usingSpringWithDamping:0.6 initialSpringVelocity:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         [_viewController.view layoutIfNeeded];
-    } completion:nil ];
+    } completion:nil];
     
 }
 
@@ -96,7 +102,7 @@
     [self mas_updateConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(_viewController.mas_topLayoutGuideBottom).offset(-(_viewController.view.bounds.size.width - 40) * 0.6);
     }];
-    
+    _isShowing = NO;
     [_viewController.view setNeedsUpdateConstraints];
     [_viewController.view updateConstraintsIfNeeded];
     
