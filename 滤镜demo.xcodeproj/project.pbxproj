@@ -14,6 +14,11 @@
 		3C1068CD1F63F7B300F301AD /* YYFilterAttributeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068C71F63F7B300F301AD /* YYFilterAttributeTableViewCell.m */; };
 		3C1068CE1F63F7B300F301AD /* YYFilterAttributeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C1068C81F63F7B300F301AD /* YYFilterAttributeTableViewCell.xib */; };
 		3C1068E41F64078A00F301AD /* ZXPUnicode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C1068E31F64078A00F301AD /* ZXPUnicode.m */; };
+		3C13E9321FD7E56D00FA5A54 /* CIHueSaturationValueGradientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C13E9311FD7E56D00FA5A54 /* CIHueSaturationValueGradientViewController.m */; };
+		3C13E9351FD7EB1100FA5A54 /* CIAreaAverageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C13E9341FD7EB1100FA5A54 /* CIAreaAverageViewController.m */; };
+		3C13E9381FD7ED1500FA5A54 /* CIAreaHistogramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C13E9371FD7ED1500FA5A54 /* CIAreaHistogramViewController.m */; };
+		3C13E93B1FD7EEAA00FA5A54 /* CIHistogramDisplayFilterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C13E93A1FD7EEAA00FA5A54 /* CIHistogramDisplayFilterViewController.m */; };
+		3C2F53A81FD92FA7008734CB /* CIClampViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C2F53A71FD92FA7008734CB /* CIClampViewController.m */; };
 		3C347D091FA8266D000A5C09 /* CIColorCrossPolynomialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C347D081FA8266D000A5C09 /* CIColorCrossPolynomialViewController.m */; };
 		3C347D0C1FA83C98000A5C09 /* CIColorInvertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C347D0B1FA83C98000A5C09 /* CIColorInvertViewController.m */; };
 		3C36BD8B1FBEB28300D3193B /* YYPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C36BD8A1FBEB28300D3193B /* YYPreviewView.m */; };
@@ -160,6 +165,16 @@
 		3C1068C71F63F7B300F301AD /* YYFilterAttributeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFilterAttributeTableViewCell.m; sourceTree = "<group>"; };
 		3C1068C81F63F7B300F301AD /* YYFilterAttributeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYFilterAttributeTableViewCell.xib; sourceTree = "<group>"; };
 		3C1068E31F64078A00F301AD /* ZXPUnicode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZXPUnicode.m; sourceTree = "<group>"; };
+		3C13E9301FD7E56D00FA5A54 /* CIHueSaturationValueGradientViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIHueSaturationValueGradientViewController.h; sourceTree = "<group>"; };
+		3C13E9311FD7E56D00FA5A54 /* CIHueSaturationValueGradientViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIHueSaturationValueGradientViewController.m; sourceTree = "<group>"; };
+		3C13E9331FD7EB1100FA5A54 /* CIAreaAverageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIAreaAverageViewController.h; sourceTree = "<group>"; };
+		3C13E9341FD7EB1100FA5A54 /* CIAreaAverageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIAreaAverageViewController.m; sourceTree = "<group>"; };
+		3C13E9361FD7ED1500FA5A54 /* CIAreaHistogramViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIAreaHistogramViewController.h; sourceTree = "<group>"; };
+		3C13E9371FD7ED1500FA5A54 /* CIAreaHistogramViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIAreaHistogramViewController.m; sourceTree = "<group>"; };
+		3C13E9391FD7EEAA00FA5A54 /* CIHistogramDisplayFilterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIHistogramDisplayFilterViewController.h; sourceTree = "<group>"; };
+		3C13E93A1FD7EEAA00FA5A54 /* CIHistogramDisplayFilterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIHistogramDisplayFilterViewController.m; sourceTree = "<group>"; };
+		3C2F53A61FD92FA7008734CB /* CIClampViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIClampViewController.h; sourceTree = "<group>"; };
+		3C2F53A71FD92FA7008734CB /* CIClampViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIClampViewController.m; sourceTree = "<group>"; };
 		3C347D071FA8266D000A5C09 /* CIColorCrossPolynomialViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIColorCrossPolynomialViewController.h; sourceTree = "<group>"; };
 		3C347D081FA8266D000A5C09 /* CIColorCrossPolynomialViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CIColorCrossPolynomialViewController.m; sourceTree = "<group>"; };
 		3C347D0A1FA83C98000A5C09 /* CIColorInvertViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIColorInvertViewController.h; sourceTree = "<group>"; };
@@ -619,6 +634,8 @@
 			children = (
 				3C5CAFDF1F7A5A3C007763FB /* CIGaussianGradientViewController.h */,
 				3C5CAFE01F7A5A3C007763FB /* CIGaussianGradientViewController.m */,
+				3C13E9301FD7E56D00FA5A54 /* CIHueSaturationValueGradientViewController.h */,
+				3C13E9311FD7E56D00FA5A54 /* CIHueSaturationValueGradientViewController.m */,
 			);
 			path = Gradient;
 			sourceTree = "<group>";
@@ -626,6 +643,12 @@
 		3CA5F3611F79E57B0072A846 /* Reduction */ = {
 			isa = PBXGroup;
 			children = (
+				3C13E9331FD7EB1100FA5A54 /* CIAreaAverageViewController.h */,
+				3C13E9341FD7EB1100FA5A54 /* CIAreaAverageViewController.m */,
+				3C13E9361FD7ED1500FA5A54 /* CIAreaHistogramViewController.h */,
+				3C13E9371FD7ED1500FA5A54 /* CIAreaHistogramViewController.m */,
+				3C13E9391FD7EEAA00FA5A54 /* CIHistogramDisplayFilterViewController.h */,
+				3C13E93A1FD7EEAA00FA5A54 /* CIHistogramDisplayFilterViewController.m */,
 			);
 			path = Reduction;
 			sourceTree = "<group>";
@@ -642,6 +665,8 @@
 			children = (
 				3CA5F3641F79E57B0072A846 /* CIAffineTileViewController.h */,
 				3CA5F3651F79E57B0072A846 /* CIAffineTileViewController.m */,
+				3C2F53A61FD92FA7008734CB /* CIClampViewController.h */,
+				3C2F53A71FD92FA7008734CB /* CIClampViewController.m */,
 				3C9F1D661FB45B3500BAE317 /* CITwelvefoldReflectedTileViewController.h */,
 				3C9F1D671FB45B3500BAE317 /* CITwelvefoldReflectedTileViewController.m */,
 			);
@@ -1041,6 +1066,7 @@
 				3CF7A8FE1FAC5EA6004F78F1 /* CIThermalViewController.m in Sources */,
 				3CF7A9071FAC608E004F78F1 /* CIXRayViewController.m in Sources */,
 				3C71CB0B1FA6FB810015D9A4 /* CIToneCurveViewController.m in Sources */,
+				3C13E93B1FD7EEAA00FA5A54 /* CIHistogramDisplayFilterViewController.m in Sources */,
 				3CA5F3831F79E57C0072A846 /* CICircleSplashDistortionViewController.m in Sources */,
 				3CF7A8EF1FAC5CC3004F78F1 /* CIPhotoEffectNoirViewController.m in Sources */,
 				3CF7A9011FAC5F2E004F78F1 /* CIVignetteViewController.m in Sources */,
@@ -1072,6 +1098,7 @@
 				3CA5F3841F79E57C0072A846 /* CIAffineTileViewController.m in Sources */,
 				3CD528B61FC6C48F001BB7C9 /* CIHardLightBlendModeViewController.m in Sources */,
 				3CD528E01FC6C6D4001BB7C9 /* CISourceAtopCompositingViewController.m in Sources */,
+				3C13E9351FD7EB1100FA5A54 /* CIAreaAverageViewController.m in Sources */,
 				3C347D0C1FA83C98000A5C09 /* CIColorInvertViewController.m in Sources */,
 				3CD528BC1FC6C4F0001BB7C9 /* CILightenBlendModeViewController.m in Sources */,
 				3CD528C51FC6C565001BB7C9 /* CILuminosityBlendModeViewController.m in Sources */,
@@ -1112,12 +1139,15 @@
 				3CA5F38D1F79E57C0072A846 /* CIColorBurnBlendModeViewController.m in Sources */,
 				3C71CAF91FA6CCD70015D9A4 /* CIExposureAdjustViewController.m in Sources */,
 				3C71CAFF1FA6CE590015D9A4 /* CIHueAdjustViewController.m in Sources */,
+				3C13E9381FD7ED1500FA5A54 /* CIAreaHistogramViewController.m in Sources */,
 				3CD528B01FC6C20F001BB7C9 /* CIDivideBlendModeViewController.m in Sources */,
 				3CA5F3821F79E57C0072A846 /* CIBumpDistortionViewController.m in Sources */,
 				3CD528DD1FC6C6CD001BB7C9 /* CISoftLightBlendModeViewController.m in Sources */,
 				3CA5F3861F79E57C0072A846 /* CIColorClampViewController.m in Sources */,
 				3C9F1D681FB45B3500BAE317 /* CITwelvefoldReflectedTileViewController.m in Sources */,
 				3CD528CE1FC6C6AA001BB7C9 /* CIMultiplyCompositingViewController.m in Sources */,
+				3C2F53A81FD92FA7008734CB /* CIClampViewController.m in Sources */,
+				3C13E9321FD7E56D00FA5A54 /* CIHueSaturationValueGradientViewController.m in Sources */,
 				3CD528DA1FC6C6C7001BB7C9 /* CIScreenBlendModeViewController.m in Sources */,
 				3C71CB0E1FA730EE0015D9A4 /* UIImage+Rotate.m in Sources */,
 				3C7EF6551F5E53A100B369F0 /* IUViewController.m in Sources */,
